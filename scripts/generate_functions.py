@@ -4,19 +4,19 @@ import json
 
 aggregate_functions = ['algebraic', 'distributive', 'holistic', 'nested', 'regression']
 scalar_functions = [
+    'array',
     'bit',
     'blob',
     'date',
+    'debug',
     'enum',
     'generic',
     'list',
-    'array',
     'map',
     'math',
     'operators',
     'random',
     'string',
-    'debug',
     'struct',
     'union',
 ]
