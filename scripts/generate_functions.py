@@ -1,30 +1,24 @@
 import os
-import re
 import json
+from pathlib import Path
 
-aggregate_functions = ['algebraic', 'distributive', 'holistic', 'nested', 'regression']
-scalar_functions = [
-    'array',
-    'bit',
-    'blob',
-    'date',
-    'debug',
-    'enum',
-    'generic',
-    'list',
-    'map',
-    'math',
-    'operators',
-    'random',
-    'string',
-    'struct',
-    'union',
-]
+
+function_groups = {'functions_core': ['aggregate', 'scalar']}
+
+
+all_function_paths = []
+src_dir = Path('src')
+for group, function_types in sorted(function_groups.items()):
+    group_dir = Path(group)
+    for function_type in function_types:
+        type_dir = src_dir.joinpath(group_dir.joinpath(function_type))
+        all_function_paths += sorted([f'{group}/{function_type}/{f.name}' for f in type_dir.iterdir() if f.is_dir()])
+
 
 header = '''//===----------------------------------------------------------------------===//
 //                         DuckDB
 //
-// duckdb/functions_core/{HEADER}_functions.hpp
+// duckdb/{HEADER}_functions.hpp
 //
 //
 //===----------------------------------------------------------------------===//
@@ -60,15 +54,11 @@ def sanitize_string(text):
     return text.replace('\\', '\\\\').replace('"', '\\"')
 
 
-all_function_types = []
-all_function_types += [f'aggregate/{x}' for x in aggregate_functions]
-all_function_types += [f'scalar/{x}' for x in scalar_functions]
-
 function_type_set = {}
 all_function_list = []
-for path in all_function_types:
-    header_path = normalize_path_separators(f'src/include/duckdb/functions_core/{path}_functions.hpp')
-    json_path = normalize_path_separators(f'src/functions_core/{path}/functions.json')
+for path in all_function_paths:
+    header_path = normalize_path_separators(f'src/include/duckdb/{path}_functions.hpp')
+    json_path = normalize_path_separators(f'src/{path}/functions.json')
     with open(json_path, 'r') as f:
         parsed_json = json.load(f)
     new_text = header.replace('{HEADER}', path)
