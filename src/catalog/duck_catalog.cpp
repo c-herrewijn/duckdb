@@ -9,7 +9,7 @@
 #include "duckdb/main/attached_database.hpp"
 #include "duckdb/transaction/duck_transaction_manager.hpp"
 #ifndef DISABLE_CORE_FUNCTIONS_EXTENSION
-#include "duckdb/core_functions/core_functions.hpp"
+#include "duckdb/functions_core/core_functions.hpp"
 #endif
 
 namespace duckdb {
