@@ -9,12 +9,12 @@
 #include "duckdb/common/types/timestamp.hpp"
 #include "duckdb/common/vector_operations/binary_executor.hpp"
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/function/scalar/strftime_format.hpp"
+#include "duckdb/functions_internal/scalar/strftime_format.hpp"
 #include "duckdb/main/client_context.hpp"
 #include "duckdb/parser/parsed_data/create_scalar_function_info.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
-#include "duckdb/function/function_binder.hpp"
-#include "duckdb/function/cast/default_casts.hpp"
+#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/functions_internal/cast/default_casts.hpp"
 #include "duckdb/main/extension_util.hpp"
 
 namespace duckdb {

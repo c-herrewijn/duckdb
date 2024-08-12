@@ -27,7 +27,7 @@
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/types/cast_helpers.hpp"
 #include "duckdb/common/types/hash.hpp"
-#include "duckdb/function/cast/cast_function_set.hpp"
+#include "duckdb/functions_internal/cast/cast_function_set.hpp"
 #include "duckdb/main/error_manager.hpp"
 
 #include "duckdb/common/serializer/serializer.hpp"

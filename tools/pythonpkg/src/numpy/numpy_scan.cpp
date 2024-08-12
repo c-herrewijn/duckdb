@@ -10,7 +10,7 @@
 #include "duckdb_python/numpy/numpy_type.hpp"
 #include "duckdb_python/pandas/pandas_analyzer.hpp"
 #include "duckdb_python/numpy/numpy_type.hpp"
-#include "duckdb/function/scalar/nested_functions.hpp"
+#include "duckdb/functions_internal/scalar/nested_functions.hpp"
 #include "duckdb_python/numpy/numpy_scan.hpp"
 #include "duckdb_python/pandas/column/pandas_numpy_column.hpp"
 

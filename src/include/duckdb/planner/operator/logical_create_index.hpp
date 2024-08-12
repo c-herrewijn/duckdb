@@ -10,7 +10,7 @@
 
 #include "duckdb/parser/parsed_data/create_index_info.hpp"
 #include "duckdb/planner/logical_operator.hpp"
-#include "duckdb/function/table_function.hpp"
+#include "duckdb/functions_internal/table_function.hpp"
 
 namespace duckdb {
 

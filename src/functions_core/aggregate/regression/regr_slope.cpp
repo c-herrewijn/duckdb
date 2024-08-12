@@ -7,7 +7,7 @@
 //! Output : Double
 
 #include "duckdb/functions_core/aggregate/regression/regr_slope.hpp"
-#include "duckdb/function/function_set.hpp"
+#include "duckdb/functions_internal/function_set.hpp"
 #include "duckdb/functions_core/aggregate/regression_functions.hpp"
 
 namespace duckdb {

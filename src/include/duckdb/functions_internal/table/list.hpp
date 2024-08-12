@@ -1,0 +1,5 @@
+#include "duckdb/functions_internal/table/read_csv.hpp"
+#include "duckdb/functions_internal/table/system_functions.hpp"
+#include "duckdb/functions_internal/table/range.hpp"
+#include "duckdb/functions_internal/table/summary.hpp"
+#include "duckdb/functions_internal/table/files.hpp"

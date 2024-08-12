@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/function/table_function.hpp"
+#include "duckdb/functions_internal/table_function.hpp"
 #include "duckdb/planner/logical_operator.hpp"
 #include "duckdb/planner/table_filter.hpp"
 #include "duckdb/common/extra_operator_info.hpp"

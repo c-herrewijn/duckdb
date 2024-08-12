@@ -2,7 +2,7 @@
 
 #include "duckdb/execution/aggregate_hashtable.hpp"
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/function/aggregate_function.hpp"
+#include "duckdb/functions_internal/aggregate_function.hpp"
 #include "duckdb/parallel/thread_context.hpp"
 #include "duckdb/planner/expression/bound_reference_expression.hpp"
 #include "duckdb/planner/expression/bound_window_expression.hpp"

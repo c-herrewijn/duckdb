@@ -5,9 +5,9 @@
 
 #include "duckdb/common/serializer/serializer.hpp"
 #include "duckdb/common/serializer/deserializer.hpp"
-#include "duckdb/function/macro_function.hpp"
-#include "duckdb/function/scalar_macro_function.hpp"
-#include "duckdb/function/table_macro_function.hpp"
+#include "duckdb/functions_internal/macro_function.hpp"
+#include "duckdb/functions_internal/scalar_macro_function.hpp"
+#include "duckdb/functions_internal/table_macro_function.hpp"
 
 namespace duckdb {
 

@@ -13,7 +13,7 @@
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/types.hpp"
 #include "duckdb/common/winapi.hpp"
-#include "duckdb/function/cast/default_casts.hpp"
+#include "duckdb/functions_internal/cast/default_casts.hpp"
 
 namespace duckdb {
 //! The Varint class is a static class that holds helper functions for the Varint type.

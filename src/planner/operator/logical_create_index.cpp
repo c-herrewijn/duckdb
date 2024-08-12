@@ -2,7 +2,7 @@
 
 #include "duckdb/catalog/catalog_entry/table_catalog_entry.hpp"
 #include "duckdb/parser/parsed_data/create_table_info.hpp"
-#include "duckdb/function/function_serialization.hpp"
+#include "duckdb/functions_internal/function_serialization.hpp"
 
 namespace duckdb {
 

@@ -4,7 +4,7 @@
 #include "column_reader.hpp"
 #include "duckdb/catalog/catalog_entry/scalar_function_catalog_entry.hpp"
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/function/scalar_function.hpp"
+#include "duckdb/functions_internal/scalar_function.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/planner/expression/bound_reference_expression.hpp"
 #include "duckdb/main/extension_helper.hpp"

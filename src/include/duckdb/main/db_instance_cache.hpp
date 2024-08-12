@@ -11,7 +11,7 @@
 #include "duckdb/main/connection_manager.hpp"
 #include "duckdb/main/database.hpp"
 #include "duckdb/common/unordered_map.hpp"
-#include "duckdb/function/replacement_scan.hpp"
+#include "duckdb/functions_internal/replacement_scan.hpp"
 #include <functional>
 
 namespace duckdb {

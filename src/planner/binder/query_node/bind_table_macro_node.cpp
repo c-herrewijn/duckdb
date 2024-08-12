@@ -12,7 +12,7 @@
 #include "duckdb/parser/tableref/joinref.hpp"
 #include "duckdb/catalog/catalog_entry/table_macro_catalog_entry.hpp"
 #include "duckdb/planner/binder.hpp"
-#include "duckdb/function/table_macro_function.hpp"
+#include "duckdb/functions_internal/table_macro_function.hpp"
 
 namespace duckdb {
 

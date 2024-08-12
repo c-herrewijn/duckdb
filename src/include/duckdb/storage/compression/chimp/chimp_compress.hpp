@@ -9,13 +9,13 @@
 #pragma once
 
 #include "duckdb/storage/compression/chimp/chimp.hpp"
-#include "duckdb/function/compression_function.hpp"
+#include "duckdb/functions_internal/compression_function.hpp"
 #include "duckdb/storage/compression/chimp/chimp_analyze.hpp"
 
 #include "duckdb/common/helper.hpp"
 #include "duckdb/common/limits.hpp"
 #include "duckdb/common/types/null_value.hpp"
-#include "duckdb/function/compression/compression.hpp"
+#include "duckdb/functions_internal/compression/compression.hpp"
 #include "duckdb/main/config.hpp"
 #include "duckdb/storage/buffer_manager.hpp"
 

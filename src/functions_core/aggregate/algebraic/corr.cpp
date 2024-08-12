@@ -2,7 +2,7 @@
 #include "duckdb/functions_core/aggregate/algebraic/covar.hpp"
 #include "duckdb/functions_core/aggregate/algebraic/stddev.hpp"
 #include "duckdb/functions_core/aggregate/algebraic/corr.hpp"
-#include "duckdb/function/function_set.hpp"
+#include "duckdb/functions_internal/function_set.hpp"
 
 namespace duckdb {
 

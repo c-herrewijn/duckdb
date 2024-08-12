@@ -3,7 +3,7 @@
 #include "duckdb/common/bitpacking.hpp"
 #include "duckdb/common/constants.hpp"
 #include "duckdb/common/random_engine.hpp"
-#include "duckdb/function/compression/compression.hpp"
+#include "duckdb/functions_internal/compression/compression.hpp"
 #include "duckdb/main/config.hpp"
 #include "duckdb/storage/checkpoint/write_overflow_strings_to_disk.hpp"
 #include "duckdb/storage/string_uncompressed.hpp"

@@ -7,7 +7,7 @@
 #include "duckdb/parser/parsed_data/create_type_info.hpp"
 #include "duckdb/catalog/catalog_entry/type_catalog_entry.hpp"
 #include "duckdb/planner/extension_callback.hpp"
-#include "duckdb/function/cast/cast_function_set.hpp"
+#include "duckdb/functions_internal/cast/cast_function_set.hpp"
 #include "duckdb/main/extension_util.hpp"
 #include "duckdb/common/vector_operations/generic_executor.hpp"
 #include "duckdb/common/exception/conversion_exception.hpp"

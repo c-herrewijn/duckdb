@@ -29,8 +29,8 @@
 #include "duckdb/common/multi_file_reader.hpp"
 #include "duckdb/execution/operator/csv_scanner/csv_option.hpp"
 #include "duckdb/execution/operator/csv_scanner/csv_reader_options.hpp"
-#include "duckdb/function/scalar/strftime_format.hpp"
-#include "duckdb/function/table/read_csv.hpp"
+#include "duckdb/functions_internal/scalar/strftime_format.hpp"
+#include "duckdb/functions_internal/table/read_csv.hpp"
 #include "duckdb/common/types/interval.hpp"
 
 namespace duckdb {

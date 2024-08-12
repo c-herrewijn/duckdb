@@ -16,7 +16,7 @@
 #include "duckdb/common/mutex.hpp"
 #include "duckdb/common/serializer/buffered_file_writer.hpp"
 #include "duckdb/common/types/column/column_data_collection.hpp"
-#include "duckdb/function/copy_function.hpp"
+#include "duckdb/functions_internal/copy_function.hpp"
 #endif
 
 #include "column_writer.hpp"

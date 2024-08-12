@@ -1,11 +1,11 @@
 #include "duckdb/execution/operator/aggregate/physical_hash_aggregate.hpp"
 #include "duckdb/execution/operator/projection/physical_projection.hpp"
 #include "duckdb/execution/physical_plan_generator.hpp"
-#include "duckdb/function/aggregate/distributive_functions.hpp"
+#include "duckdb/functions_internal/aggregate/distributive_functions.hpp"
 #include "duckdb/planner/expression/bound_aggregate_expression.hpp"
 #include "duckdb/planner/expression/bound_reference_expression.hpp"
 #include "duckdb/planner/operator/logical_distinct.hpp"
-#include "duckdb/function/function_binder.hpp"
+#include "duckdb/functions_internal/function_binder.hpp"
 #include "duckdb/optimizer/rule/ordered_aggregate_optimizer.hpp"
 
 namespace duckdb {

@@ -7,7 +7,7 @@
 #include "duckdb/execution/operator/csv_scanner/csv_casting.hpp"
 #include "duckdb/execution/operator/csv_scanner/csv_file_scanner.hpp"
 #include "duckdb/execution/operator/csv_scanner/skip_scanner.hpp"
-#include "duckdb/function/cast/cast_function_set.hpp"
+#include "duckdb/functions_internal/cast/cast_function_set.hpp"
 #include "duckdb/main/client_data.hpp"
 #include "utf8proc_wrapper.hpp"
 

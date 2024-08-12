@@ -5,7 +5,7 @@
 #include "duckdb/common/types/data_chunk.hpp"
 #include "duckdb/common/pair.hpp"
 #include "duckdb/common/types/value_map.hpp"
-#include "duckdb/function/scalar/nested_functions.hpp"
+#include "duckdb/functions_internal/scalar/nested_functions.hpp"
 
 namespace duckdb {
 

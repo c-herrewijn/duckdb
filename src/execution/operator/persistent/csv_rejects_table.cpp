@@ -1,6 +1,6 @@
 #include "duckdb/main/appender.hpp"
 #include "duckdb/parser/parsed_data/create_table_info.hpp"
-#include "duckdb/function/table/read_csv.hpp"
+#include "duckdb/functions_internal/table/read_csv.hpp"
 #include "duckdb/execution/operator/persistent/csv_rejects_table.hpp"
 #include "duckdb/catalog/catalog_entry/table_catalog_entry.hpp"
 #include "duckdb/parser/parsed_data/create_type_info.hpp"

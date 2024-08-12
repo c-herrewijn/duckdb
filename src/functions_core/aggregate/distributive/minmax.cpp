@@ -7,7 +7,7 @@
 #include "duckdb/planner/expression.hpp"
 #include "duckdb/planner/expression/bound_comparison_expression.hpp"
 #include "duckdb/planner/expression_binder.hpp"
-#include "duckdb/function/function_binder.hpp"
+#include "duckdb/functions_internal/function_binder.hpp"
 #include "duckdb/functions_core/aggregate/sort_key_helpers.hpp"
 #include "duckdb/functions_core/aggregate/minmax_n_helpers.hpp"
 

@@ -10,7 +10,7 @@
 
 #include "duckdb/common/common.hpp"
 #include "duckdb/common/enums/statement_type.hpp"
-#include "duckdb/function/table_function.hpp"
+#include "duckdb/functions_internal/table_function.hpp"
 
 namespace duckdb {
 

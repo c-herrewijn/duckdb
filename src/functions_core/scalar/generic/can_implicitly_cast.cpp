@@ -1,8 +1,8 @@
 #include "duckdb/functions_core/scalar/generic_functions.hpp"
 #include "duckdb/planner/expression/bound_constant_expression.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
-#include "duckdb/function/cast/cast_function_set.hpp"
-#include "duckdb/function/cast_rules.hpp"
+#include "duckdb/functions_internal/cast/cast_function_set.hpp"
+#include "duckdb/functions_internal/cast_rules.hpp"
 
 namespace duckdb {
 

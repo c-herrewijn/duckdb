@@ -1,5 +1,5 @@
-#include "duckdb/function/cast/cast_function_set.hpp"
-#include "duckdb/function/cast/default_casts.hpp"
+#include "duckdb/functions_internal/cast/cast_function_set.hpp"
+#include "duckdb/functions_internal/cast/default_casts.hpp"
 #include "duckdb/planner/expression/bound_parameter_expression.hpp"
 #include "json_common.hpp"
 #include "json_functions.hpp"

@@ -15,7 +15,7 @@
 #include "duckdb_python/functional.hpp"
 #include "duckdb_python/pybind11/conversions/pyconnection_default.hpp"
 #include "duckdb/common/box_renderer.hpp"
-#include "duckdb/function/function.hpp"
+#include "duckdb/functions_internal/function.hpp"
 #include "duckdb_python/pybind11/conversions/exception_handling_enum.hpp"
 #include "duckdb_python/pybind11/conversions/python_udf_type_enum.hpp"
 #include "duckdb_python/pybind11/conversions/python_csv_line_terminator_enum.hpp"

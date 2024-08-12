@@ -12,7 +12,7 @@
 #include "duckdb/common/types/null_value.hpp"
 #include "duckdb/common/types/vector.hpp"
 #include "duckdb/common/vector_size.hpp"
-#include "duckdb/function/compression_function.hpp"
+#include "duckdb/functions_internal/compression_function.hpp"
 #include "duckdb/main/config.hpp"
 #include "duckdb/planner/table_filter.hpp"
 #include "duckdb/storage/buffer_manager.hpp"

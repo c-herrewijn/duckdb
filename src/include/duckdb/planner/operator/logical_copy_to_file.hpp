@@ -12,7 +12,7 @@
 #include "duckdb/common/filename_pattern.hpp"
 #include "duckdb/common/local_file_system.hpp"
 #include "duckdb/common/optional_idx.hpp"
-#include "duckdb/function/copy_function.hpp"
+#include "duckdb/functions_internal/copy_function.hpp"
 #include "duckdb/planner/logical_operator.hpp"
 
 namespace duckdb {

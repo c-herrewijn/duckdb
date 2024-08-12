@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/function/cast/default_casts.hpp"
+#include "duckdb/functions_internal/cast/default_casts.hpp"
 
 namespace duckdb {
 struct MapCastInfo;

@@ -11,7 +11,7 @@
 #include "duckdb/common/common.hpp"
 #include "duckdb/storage/storage_info.hpp"
 #include "duckdb/storage/buffer/block_handle.hpp"
-#include "duckdb/function/compression_function.hpp"
+#include "duckdb/functions_internal/compression_function.hpp"
 
 namespace duckdb {
 struct UncompressedStringSegmentState;

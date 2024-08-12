@@ -10,7 +10,7 @@
 
 #include "duckdb/catalog/standard_entry.hpp"
 #include "duckdb/common/unordered_map.hpp"
-#include "duckdb/function/copy_function.hpp"
+#include "duckdb/functions_internal/copy_function.hpp"
 
 namespace duckdb {
 

@@ -12,7 +12,7 @@
 #include "duckdb_python/pyconnection/pyconnection.hpp"
 #include "duckdb_python/pyrelation.hpp"
 #include "duckdb_python/pyresult.hpp"
-#include "duckdb/function/table/arrow.hpp"
+#include "duckdb/functions_internal/table/arrow.hpp"
 
 namespace duckdb {
 

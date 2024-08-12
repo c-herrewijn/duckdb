@@ -2,7 +2,7 @@
 #include "duckdb/common/vector_operations/vector_operations.hpp"
 #include "duckdb/functions_core/aggregate/regression_functions.hpp"
 #include "duckdb/planner/expression/bound_aggregate_expression.hpp"
-#include "duckdb/function/function_set.hpp"
+#include "duckdb/functions_internal/function_set.hpp"
 
 namespace duckdb {
 struct RegrState {

@@ -813,7 +813,7 @@
   {
     "class": "StrpTimeFormat",
     "includes": [
-      "duckdb/function/scalar/strftime_format.hpp"
+      "duckdb/functions_internal/scalar/strftime_format.hpp"
     ],
     "members": [
       {
@@ -828,7 +828,7 @@
   {
     "class": "ReadCSVData",
     "includes": [
-      "duckdb/function/table/read_csv.hpp"
+      "duckdb/functions_internal/table/read_csv.hpp"
     ],
     "members": [
       {

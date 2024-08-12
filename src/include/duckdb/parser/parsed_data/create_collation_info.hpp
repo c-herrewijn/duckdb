@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/parser/parsed_data/create_info.hpp"
-#include "duckdb/function/scalar_function.hpp"
+#include "duckdb/functions_internal/scalar_function.hpp"
 
 namespace duckdb {
 

@@ -1,6 +1,6 @@
 #include "duckdb/common/types/null_value.hpp"
-#include "duckdb/function/compression/compression.hpp"
-#include "duckdb/function/compression_function.hpp"
+#include "duckdb/functions_internal/compression/compression.hpp"
+#include "duckdb/functions_internal/compression_function.hpp"
 #include "duckdb/storage/buffer_manager.hpp"
 #include "duckdb/storage/table/column_data_checkpointer.hpp"
 #include "duckdb/storage/table/column_segment.hpp"

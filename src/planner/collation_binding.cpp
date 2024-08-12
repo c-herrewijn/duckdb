@@ -4,7 +4,7 @@
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/main/config.hpp"
 #include "duckdb/catalog/catalog.hpp"
-#include "duckdb/function/function_binder.hpp"
+#include "duckdb/functions_internal/function_binder.hpp"
 
 namespace duckdb {
 

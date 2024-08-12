@@ -1,4 +1,4 @@
-#include "duckdb/function/scalar/nested_functions.hpp"
+#include "duckdb/functions_internal/scalar/nested_functions.hpp"
 #include "duckdb/functions_core/aggregate/nested_functions.hpp"
 #include "duckdb/common/types/vector.hpp"
 #include "duckdb/common/string_map_set.hpp"

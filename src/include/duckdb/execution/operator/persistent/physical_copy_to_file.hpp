@@ -12,7 +12,7 @@
 #include "duckdb/common/file_system.hpp"
 #include "duckdb/common/filename_pattern.hpp"
 #include "duckdb/execution/physical_operator.hpp"
-#include "duckdb/function/copy_function.hpp"
+#include "duckdb/functions_internal/copy_function.hpp"
 #include "duckdb/parser/parsed_data/copy_info.hpp"
 #include "duckdb/storage/storage_lock.hpp"
 

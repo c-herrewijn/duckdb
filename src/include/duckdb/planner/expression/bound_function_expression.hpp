@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/function/scalar_function.hpp"
+#include "duckdb/functions_internal/scalar_function.hpp"
 #include "duckdb/planner/expression.hpp"
 
 namespace duckdb {

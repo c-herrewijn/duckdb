@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/optimizer/rule.hpp"
-#include "duckdb/function/scalar/string_functions.hpp"
+#include "duckdb/functions_internal/scalar/string_functions.hpp"
 
 namespace duckdb {
 
