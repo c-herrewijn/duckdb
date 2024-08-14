@@ -1,7 +1,7 @@
 //===----------------------------------------------------------------------===//
 //                         DuckDB
 //
-// duckdb/functions_internal_new/internal_functions.hpp
+// duckdb/functions_internal/internal_functions.hpp
 //
 //
 //===----------------------------------------------------------------------===//

@@ -3,10 +3,7 @@ import json
 from pathlib import Path
 
 
-function_groups = {
-    # 'functions_core': ['aggregate', 'scalar'],
-    'functions_internal_new': ['scalar']
-}
+function_groups = {'functions_core': ['aggregate', 'scalar'], 'functions_internal': ['scalar']}
 
 
 header = '''//===----------------------------------------------------------------------===//
