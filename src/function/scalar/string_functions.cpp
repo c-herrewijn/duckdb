@@ -5,7 +5,6 @@ namespace duckdb {
 void BuiltinFunctions::RegisterStringFunctions() {
 	Register<StripAccentsFun>();
 	Register<ConcatFun>();
-	Register<ConcatWSFun>();
 	Register<ContainsFun>();
 	Register<LengthFun>();
 	Register<LikeFun>();

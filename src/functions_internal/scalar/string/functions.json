@@ -16,5 +16,12 @@
         "type": "scalar_function",
         "struct": "LowerFun",
         "aliases": ["lcase"]
+    },
+    {
+        "name": "concat_ws",
+        "parameters": "separator,string,...",
+        "description": "Concatenate strings together separated by the specified separator.",
+        "example": "concat_ws(', ', 'Banana', 'Apple', 'Melon')",
+        "type": "scalar_function"
     }
 ]

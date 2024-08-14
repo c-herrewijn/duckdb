@@ -45,4 +45,13 @@ struct LcaseFun {
 	static constexpr const char *Name = "lcase";
 };
 
+struct ConcatWsFun {
+	static constexpr const char *Name = "concat_ws";
+	static constexpr const char *Parameters = "col0,col1";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
 } // namespace duckdb

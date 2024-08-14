@@ -29,10 +29,6 @@ struct ConcatFun {
 	static ScalarFunction GetFunction();
 };
 
-struct ConcatWSFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 struct LengthFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 	static inline bool IsCharacter(char c) {
