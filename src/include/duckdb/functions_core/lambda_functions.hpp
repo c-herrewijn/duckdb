@@ -8,7 +8,7 @@
 
 #pragma once
 
-#include "duckdb/functions_internal/function.hpp"
+#include "duckdb/function/function.hpp"
 #include "duckdb/execution/expression_executor_state.hpp"
 #include "duckdb/execution/expression_executor.hpp"
 

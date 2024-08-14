@@ -6,7 +6,7 @@
 // power(corr(y,x), 2)
 
 #include "duckdb/functions_core/aggregate/algebraic/corr.hpp"
-#include "duckdb/functions_internal/function_set.hpp"
+#include "duckdb/function/function_set.hpp"
 #include "duckdb/functions_core/aggregate/regression_functions.hpp"
 
 namespace duckdb {

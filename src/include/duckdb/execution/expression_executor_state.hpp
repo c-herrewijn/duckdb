@@ -10,7 +10,7 @@
 
 #include "duckdb/common/common.hpp"
 #include "duckdb/common/types/data_chunk.hpp"
-#include "duckdb/functions_internal/function.hpp"
+#include "duckdb/function/function.hpp"
 
 namespace duckdb {
 class Expression;

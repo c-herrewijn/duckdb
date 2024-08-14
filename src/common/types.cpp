@@ -20,7 +20,7 @@
 #include "duckdb/common/types/vector.hpp"
 #include "duckdb/common/uhugeint.hpp"
 #include "duckdb/common/unordered_map.hpp"
-#include "duckdb/functions_internal/cast_rules.hpp"
+#include "duckdb/function/cast_rules.hpp"
 #include "duckdb/main/attached_database.hpp"
 #include "duckdb/main/client_context.hpp"
 #include "duckdb/main/client_data.hpp"

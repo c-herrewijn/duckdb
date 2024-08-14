@@ -3,7 +3,7 @@
 #include "duckdb/planner/operator/logical_pragma.hpp"
 #include "duckdb/catalog/catalog_entry/pragma_function_catalog_entry.hpp"
 #include "duckdb/catalog/catalog.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/planner/expression_binder/constant_binder.hpp"
 #include "duckdb/execution/expression_executor.hpp"
 

@@ -16,7 +16,7 @@
 
 #include "duckdb/common/adbc/options.h"
 #include "duckdb/common/adbc/single_batch_array_stream.hpp"
-#include "duckdb/functions_internal/table/arrow.hpp"
+#include "duckdb/function/table/arrow.hpp"
 
 #include <stdlib.h>
 #include <string.h>

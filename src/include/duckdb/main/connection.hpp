@@ -11,7 +11,7 @@
 #include "duckdb/common/enums/profiler_format.hpp"
 #include "duckdb/common/serializer/buffered_file_writer.hpp"
 #include "duckdb/common/winapi.hpp"
-#include "duckdb/functions_internal/udf_function.hpp"
+#include "duckdb/function/udf_function.hpp"
 #include "duckdb/main/materialized_query_result.hpp"
 #include "duckdb/main/pending_query_result.hpp"
 #include "duckdb/main/prepared_statement.hpp"

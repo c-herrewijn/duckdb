@@ -3,7 +3,7 @@
 #include "duckdb/parser/parser.hpp"
 #include "duckdb/parser/parsed_data/create_macro_info.hpp"
 #include "duckdb/parser/statement/select_statement.hpp"
-#include "duckdb/functions_internal/table_macro_function.hpp"
+#include "duckdb/function/table_macro_function.hpp"
 
 namespace duckdb {
 

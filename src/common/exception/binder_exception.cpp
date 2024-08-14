@@ -1,6 +1,6 @@
 #include "duckdb/common/exception/binder_exception.hpp"
 #include "duckdb/common/string_util.hpp"
-#include "duckdb/functions_internal/function.hpp"
+#include "duckdb/function/function.hpp"
 
 namespace duckdb {
 

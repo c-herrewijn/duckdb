@@ -1,4 +1,4 @@
-#include "duckdb/functions_internal/scalar/strftime_format.hpp"
+#include "duckdb/function/scalar/strftime_format.hpp"
 
 #include "duckdb/common/vector_operations/unary_executor.hpp"
 #include "duckdb/execution/expression_executor.hpp"

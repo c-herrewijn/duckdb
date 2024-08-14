@@ -2,7 +2,7 @@
 #include "duckdb/parser/tableref/showref.hpp"
 #include "duckdb/planner/tableref/bound_table_function.hpp"
 #include "duckdb/planner/operator/logical_column_data_get.hpp"
-#include "duckdb/functions_internal/pragma/pragma_functions.hpp"
+#include "duckdb/function/pragma/pragma_functions.hpp"
 #include "duckdb/parser/parsed_data/create_view_info.hpp"
 #include "duckdb/parser/tableref/subqueryref.hpp"
 

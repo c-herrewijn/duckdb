@@ -3,7 +3,7 @@
 #include "duckdb/common/enum_util.hpp"
 #include "duckdb/common/index_map.hpp"
 #include "duckdb/execution/index/art/art.hpp"
-#include "duckdb/functions_internal/table/table_scan.hpp"
+#include "duckdb/function/table/table_scan.hpp"
 #include "duckdb/parser/constraints/list.hpp"
 #include "duckdb/parser/parsed_expression_iterator.hpp"
 #include "duckdb/planner/binder.hpp"

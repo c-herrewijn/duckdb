@@ -61,7 +61,7 @@ if '--extended' in sys.argv:
             'duckdb/planner/parsed_data/bound_create_table_info.hpp',
             'duckdb/parser/constraints/not_null_constraint.hpp',
             'duckdb/storage/data_table.hpp',
-            'duckdb/functions_internal/pragma_function.hpp',
+            'duckdb/function/pragma_function.hpp',
             'duckdb/parser/qualified_name.hpp',
             'duckdb/parser/parser.hpp',
             'duckdb/planner/binder.hpp',

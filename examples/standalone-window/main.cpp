@@ -6,7 +6,7 @@
 #include "duckdb/planner/expression/bound_constant_expression.hpp"
 #include "duckdb/planner/expression/bound_reference_expression.hpp"
 #include "duckdb/parallel/thread_context.hpp"
-#include "duckdb/functions_internal/aggregate/distributive_functions.hpp"
+#include "duckdb/function/aggregate/distributive_functions.hpp"
 #endif
 
 using namespace duckdb;

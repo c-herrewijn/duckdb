@@ -1,5 +1,5 @@
-#include "duckdb/functions_internal/compression/compression.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression/compression.hpp"
+#include "duckdb/function/compression_function.hpp"
 #include "duckdb/storage/compression/chimp/chimp_analyze.hpp"
 #include "duckdb/storage/compression/chimp/chimp_compress.hpp"
 #include "duckdb/storage/compression/chimp/chimp_fetch.hpp"

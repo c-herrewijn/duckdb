@@ -1,6 +1,6 @@
 #include "duckdb/common/types/null_value.hpp"
 #include "duckdb/common/types/vector.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 #include "duckdb/storage/buffer_manager.hpp"
 #include "duckdb/storage/checkpoint/write_overflow_strings_to_disk.hpp"
 #include "duckdb/storage/segment/uncompressed.hpp"

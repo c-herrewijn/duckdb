@@ -3,8 +3,8 @@
 #include "duckdb/catalog/catalog_entry/copy_function_catalog_entry.hpp"
 #include "duckdb/common/serializer/deserializer.hpp"
 #include "duckdb/common/serializer/serializer.hpp"
-#include "duckdb/functions_internal/copy_function.hpp"
-#include "duckdb/functions_internal/function_serialization.hpp"
+#include "duckdb/function/copy_function.hpp"
+#include "duckdb/function/function_serialization.hpp"
 
 namespace duckdb {
 

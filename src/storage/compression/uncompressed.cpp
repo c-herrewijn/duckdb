@@ -1,5 +1,5 @@
 #include "duckdb/storage/segment/uncompressed.hpp"
-#include "duckdb/functions_internal/compression/compression.hpp"
+#include "duckdb/function/compression/compression.hpp"
 
 namespace duckdb {
 

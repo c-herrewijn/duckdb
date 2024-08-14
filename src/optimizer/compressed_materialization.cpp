@@ -1,8 +1,8 @@
 #include "duckdb/optimizer/compressed_materialization.hpp"
 
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/functions_internal/scalar/compressed_materialization_functions.hpp"
-#include "duckdb/functions_internal/scalar/operators.hpp"
+#include "duckdb/function/scalar/compressed_materialization_functions.hpp"
+#include "duckdb/function/scalar/operators.hpp"
 #include "duckdb/optimizer/column_binding_replacer.hpp"
 #include "duckdb/optimizer/optimizer.hpp"
 #include "duckdb/optimizer/topn_optimizer.hpp"

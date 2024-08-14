@@ -1,6 +1,6 @@
 #include "duckdb/execution/operator/csv_scanner/csv_buffer_manager.hpp"
 #include "duckdb/execution/operator/csv_scanner/csv_buffer.hpp"
-#include "duckdb/functions_internal/table/read_csv.hpp"
+#include "duckdb/function/table/read_csv.hpp"
 namespace duckdb {
 
 CSVBufferManager::CSVBufferManager(ClientContext &context_p, const CSVReaderOptions &options, const string &file_path_p,

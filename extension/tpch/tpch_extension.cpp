@@ -3,7 +3,7 @@
 #include "tpch_extension.hpp"
 
 #ifndef DUCKDB_AMALGAMATION
-#include "duckdb/functions_internal/table_function.hpp"
+#include "duckdb/function/table_function.hpp"
 #include "duckdb/parser/parsed_data/create_view_info.hpp"
 #include "duckdb/parser/parser.hpp"
 #include "duckdb/parser/statement/select_statement.hpp"

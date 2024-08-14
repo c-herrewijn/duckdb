@@ -12,7 +12,7 @@
 #include "duckdb/storage/storage_lock.hpp"
 #include "duckdb/storage/buffer/buffer_handle.hpp"
 #include "duckdb/common/vector.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 #include "duckdb/transaction/transaction_data.hpp"
 #include "duckdb/planner/bound_constraint.hpp"
 

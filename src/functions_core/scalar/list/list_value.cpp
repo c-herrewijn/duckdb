@@ -6,7 +6,7 @@
 #include "duckdb/common/pair.hpp"
 #include "duckdb/storage/statistics/list_stats.hpp"
 #include "duckdb/planner/expression_binder.hpp"
-#include "duckdb/functions_internal/scalar/nested_functions.hpp"
+#include "duckdb/function/scalar/nested_functions.hpp"
 #include "duckdb/parser/query_error_context.hpp"
 
 namespace duckdb {

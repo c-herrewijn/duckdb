@@ -9,8 +9,8 @@
 #pragma once
 
 #include "duckdb/parser/parsed_data/create_function_info.hpp"
-#include "duckdb/functions_internal/pragma_function.hpp"
-#include "duckdb/functions_internal/function_set.hpp"
+#include "duckdb/function/pragma_function.hpp"
+#include "duckdb/function/function_set.hpp"
 
 namespace duckdb {
 

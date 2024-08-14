@@ -5,12 +5,10 @@
 #include "duckdb/parser/parsed_data/drop_info.hpp"
 #include "duckdb/parser/parsed_data/create_schema_info.hpp"
 #include "duckdb/catalog/default/default_schemas.hpp"
-#include "duckdb/functions_internal/built_in_functions.hpp"
+#include "duckdb/function/built_in_functions.hpp"
 #include "duckdb/main/attached_database.hpp"
 #include "duckdb/transaction/duck_transaction_manager.hpp"
-#ifndef DISABLE_CORE_FUNCTIONS_EXTENSION
-#include "duckdb/functions_core/core_functions.hpp"
-#endif
+#include "duckdb/function/function_list.hpp"
 
 namespace duckdb {
 
@@ -39,9 +37,7 @@ void DuckCatalog::Initialize(bool load_builtin) {
 		BuiltinFunctions builtin(data, *this);
 		builtin.Initialize();
 
-#ifndef DISABLE_CORE_FUNCTIONS_EXTENSION
-		CoreFunctions::RegisterFunctions(*this, data);
-#endif
+		FunctionList::RegisterFunctions(*this, data);
 	}
 
 	Verify();

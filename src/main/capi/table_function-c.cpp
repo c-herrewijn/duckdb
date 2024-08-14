@@ -1,7 +1,7 @@
 #include "duckdb/catalog/catalog.hpp"
 #include "duckdb/common/type_visitor.hpp"
 #include "duckdb/common/types.hpp"
-#include "duckdb/functions_internal/table_function.hpp"
+#include "duckdb/function/table_function.hpp"
 #include "duckdb/main/capi/capi_internal.hpp"
 #include "duckdb/main/client_context.hpp"
 #include "duckdb/parser/parsed_data/create_table_function_info.hpp"

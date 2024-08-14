@@ -3,7 +3,7 @@
 #include "duckdb/common/exception.hpp"
 #include "duckdb/planner/expression_iterator.hpp"
 #include "duckdb/planner/operator/logical_filter.hpp"
-#include "duckdb/functions_internal/scalar/generic_functions.hpp"
+#include "duckdb/function/scalar/generic_functions.hpp"
 #include "duckdb/planner/expression/bound_constant_expression.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 

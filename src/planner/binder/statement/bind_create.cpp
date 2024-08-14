@@ -31,7 +31,7 @@
 #include "duckdb/planner/query_node/bound_select_node.hpp"
 #include "duckdb/planner/tableref/bound_basetableref.hpp"
 #include "duckdb/parser/constraints/foreign_key_constraint.hpp"
-#include "duckdb/functions_internal/scalar_macro_function.hpp"
+#include "duckdb/function/scalar_macro_function.hpp"
 #include "duckdb/storage/data_table.hpp"
 #include "duckdb/storage/storage_extension.hpp"
 #include "duckdb/main/client_data.hpp"
@@ -40,7 +40,7 @@
 #include "duckdb/main/database_manager.hpp"
 #include "duckdb/main/attached_database.hpp"
 #include "duckdb/catalog/duck_catalog.hpp"
-#include "duckdb/functions_internal/table/table_scan.hpp"
+#include "duckdb/function/table/table_scan.hpp"
 #include "duckdb/parser/tableref/basetableref.hpp"
 #include "duckdb/planner/expression_binder/select_bind_state.hpp"
 

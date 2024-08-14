@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/storage/table/column_data.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 #include "duckdb/storage/table/column_checkpoint_state.hpp"
 
 namespace duckdb {

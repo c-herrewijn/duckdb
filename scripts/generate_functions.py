@@ -3,16 +3,10 @@ import json
 from pathlib import Path
 
 
-function_groups = {'functions_core': ['aggregate', 'scalar']}
-
-
-all_function_paths = []
-src_dir = Path('src')
-for group, function_types in sorted(function_groups.items()):
-    group_dir = Path(group)
-    for function_type in function_types:
-        type_dir = src_dir.joinpath(group_dir.joinpath(function_type))
-        all_function_paths += sorted([f'{group}/{function_type}/{f.name}' for f in type_dir.iterdir() if f.is_dir()])
+function_groups = {
+    # 'functions_core': ['aggregate', 'scalar'],
+    'functions_internal_new': ['scalar']
+}
 
 
 header = '''//===----------------------------------------------------------------------===//
@@ -28,7 +22,7 @@ header = '''//===---------------------------------------------------------------
 
 #pragma once
 
-#include "duckdb/functions_internal/function_set.hpp"
+#include "duckdb/function/function_set.hpp"
 
 namespace duckdb {
 
@@ -36,6 +30,21 @@ namespace duckdb {
 
 footer = '''} // namespace duckdb
 '''
+
+
+def main():
+    function_type_set = {}
+    for group, function_types in sorted(function_groups.items()):
+        all_functions_group = []
+        group_dir = Path(group)
+        for function_type in function_types:
+            type_dir = Path('src').joinpath(group_dir.joinpath(function_type))
+            relative_function_paths = sorted(
+                [f'{group}/{function_type}/{f.name}' for f in type_dir.iterdir() if f.is_dir()]
+            )
+            for function_path in relative_function_paths:
+                create_header_file(function_path, all_functions_group, function_type_set)
+        create_function_list_file(group, all_functions_group)
 
 
 def normalize_path_separators(x):
@@ -54,9 +63,7 @@ def sanitize_string(text):
     return text.replace('\\', '\\\\').replace('"', '\\"')
 
 
-function_type_set = {}
-all_function_list = []
-for path in all_function_paths:
+def create_header_file(path, all_function_list, function_type_set):
     header_path = normalize_path_separators(f'src/include/duckdb/{path}_functions.hpp')
     json_path = normalize_path_separators(f'src/{path}/functions.json')
     with open(json_path, 'r') as f:
@@ -151,27 +158,33 @@ for path in all_function_paths:
     with open(header_path, 'w+') as f:
         f.write(new_text)
 
-function_list_file = normalize_path_separators('src/functions_core/function_list.cpp')
-with open(function_list_file, 'r') as f:
-    text = f.read()
 
-static_function = 'static const StaticFunctionDefinition internal_functions[] = {'
-pos = text.find(static_function)
-header = text[:pos]
-footer_lines = text[pos:].split('\n')
-footer = ''
-for i in range(len(footer_lines)):
-    if len(footer_lines[i]) == 0:
-        footer = '\n'.join(footer_lines[i:])
-        break
+def create_function_list_file(group, all_function_list):
+    function_list_file = normalize_path_separators(f'src/{group}/function_list.cpp')
+    with open(function_list_file, 'r') as f:
+        text = f.read()
 
-new_text = header
-new_text += static_function + '\n'
-all_function_list = sorted(all_function_list, key=lambda x: x[0])
-for entry in all_function_list:
-    new_text += '\t' + entry[1] + ',\n'
-new_text += '\tFINAL_FUNCTION\n};\n'
-new_text += footer
+    static_function = 'static const StaticFunctionDefinition internal_functions[] = {'
+    pos = text.find(static_function)
+    header = text[:pos]
+    footer_lines = text[pos:].split('\n')
+    footer = ''
+    for i in range(len(footer_lines)):
+        if len(footer_lines[i]) == 0:
+            footer = '\n'.join(footer_lines[i:])
+            break
 
-with open(function_list_file, 'w+') as f:
-    f.write(new_text)
+    new_text = header
+    new_text += static_function + '\n'
+    all_function_list = sorted(all_function_list, key=lambda x: x[0])
+    for entry in all_function_list:
+        new_text += '\t' + entry[1] + ',\n'
+    new_text += '\tFINAL_FUNCTION\n};\n'
+    new_text += footer
+
+    with open(function_list_file, 'w+') as f:
+        f.write(new_text)
+
+
+if __name__ == "__main__":
+    main()

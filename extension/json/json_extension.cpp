@@ -4,7 +4,7 @@
 #include "duckdb/catalog/catalog_entry/macro_catalog_entry.hpp"
 #include "duckdb/catalog/default/default_functions.hpp"
 #include "duckdb/common/string_util.hpp"
-#include "duckdb/functions_internal/copy_function.hpp"
+#include "duckdb/function/copy_function.hpp"
 #include "duckdb/main/extension_util.hpp"
 #include "duckdb/parser/expression/constant_expression.hpp"
 #include "duckdb/parser/expression/function_expression.hpp"

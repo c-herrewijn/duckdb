@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/storage/compression/patas/patas.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 
 namespace duckdb {
 

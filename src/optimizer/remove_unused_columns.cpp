@@ -1,7 +1,7 @@
 #include "duckdb/optimizer/remove_unused_columns.hpp"
 
-#include "duckdb/functions_internal/aggregate/distributive_functions.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/aggregate/distributive_functions.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/parser/parsed_data/vacuum_info.hpp"
 #include "duckdb/planner/binder.hpp"
 #include "duckdb/planner/column_binding_map.hpp"

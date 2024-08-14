@@ -1,5 +1,5 @@
 #include "duckdb/functions_core/scalar/array_functions.hpp"
-#include "duckdb/functions_internal/scalar/nested_functions.hpp"
+#include "duckdb/function/scalar/nested_functions.hpp"
 #include "duckdb/storage/statistics/array_stats.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 

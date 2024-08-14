@@ -2,8 +2,8 @@
 #include "duckdb/planner/expression/bound_default_expression.hpp"
 #include "duckdb/planner/expression/bound_parameter_expression.hpp"
 #include "duckdb/planner/expression/bound_constant_expression.hpp"
-#include "duckdb/functions_internal/cast_rules.hpp"
-#include "duckdb/functions_internal/cast/cast_function_set.hpp"
+#include "duckdb/function/cast_rules.hpp"
+#include "duckdb/function/cast/cast_function_set.hpp"
 #include "duckdb/main/config.hpp"
 
 namespace duckdb {

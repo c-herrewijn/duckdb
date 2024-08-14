@@ -11,7 +11,7 @@
 #include <utility>
 
 #include "duckdb/execution/physical_operator.hpp"
-#include "duckdb/functions_internal/copy_function.hpp"
+#include "duckdb/function/copy_function.hpp"
 #include "duckdb/parser/parsed_data/copy_info.hpp"
 #include "duckdb/parser/parsed_data/exported_table_data.hpp"
 

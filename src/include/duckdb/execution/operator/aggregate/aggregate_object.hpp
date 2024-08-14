@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/functions_internal/aggregate_function.hpp"
+#include "duckdb/function/aggregate_function.hpp"
 
 namespace duckdb {
 

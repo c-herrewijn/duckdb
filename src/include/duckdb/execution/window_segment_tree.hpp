@@ -11,7 +11,7 @@
 #include "duckdb/common/sort/sort.hpp"
 #include "duckdb/common/types/data_chunk.hpp"
 #include "duckdb/execution/physical_operator.hpp"
-#include "duckdb/functions_internal/aggregate_function.hpp"
+#include "duckdb/function/aggregate_function.hpp"
 #include "duckdb/common/enums/window_aggregation_mode.hpp"
 #include "duckdb/execution/operator/aggregate/aggregate_object.hpp"
 #include "duckdb/parser/expression/window_expression.hpp"

@@ -1,7 +1,7 @@
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/types/value.hpp"
 #include "duckdb/functions_core/scalar/struct_functions.hpp"
-#include "duckdb/functions_internal/replacement_scan.hpp"
+#include "duckdb/function/replacement_scan.hpp"
 #include "duckdb/parser/expression/constant_expression.hpp"
 #include "duckdb/parser/expression/function_expression.hpp"
 #include "duckdb/parser/statement/copy_statement.hpp"

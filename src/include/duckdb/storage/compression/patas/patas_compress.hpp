@@ -10,12 +10,12 @@
 
 #include "duckdb/common/bitpacking.hpp"
 #include "duckdb/storage/compression/patas/patas.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 #include "duckdb/storage/compression/patas/patas_analyze.hpp"
 
 #include "duckdb/common/limits.hpp"
 #include "duckdb/common/types/null_value.hpp"
-#include "duckdb/functions_internal/compression/compression.hpp"
+#include "duckdb/function/compression/compression.hpp"
 #include "duckdb/main/config.hpp"
 #include "duckdb/storage/buffer_manager.hpp"
 

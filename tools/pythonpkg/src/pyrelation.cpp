@@ -9,7 +9,7 @@
 #include "duckdb/main/relation/query_relation.hpp"
 #include "duckdb/parser/parser.hpp"
 #include "duckdb/main/relation/view_relation.hpp"
-#include "duckdb/functions_internal/pragma/pragma_functions.hpp"
+#include "duckdb/function/pragma/pragma_functions.hpp"
 #include "duckdb/parser/statement/pragma_statement.hpp"
 #include "duckdb/common/box_renderer.hpp"
 #include "duckdb/main/query_result.hpp"

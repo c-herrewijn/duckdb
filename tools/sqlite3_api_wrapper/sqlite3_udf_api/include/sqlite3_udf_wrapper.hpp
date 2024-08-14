@@ -1,5 +1,5 @@
 #include "udf_struct_sqlite3.h"
-#include "duckdb/functions_internal/scalar_function.hpp"
+#include "duckdb/function/scalar_function.hpp"
 
 namespace duckdb {
 

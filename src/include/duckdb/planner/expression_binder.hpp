@@ -20,7 +20,7 @@
 #include "duckdb/planner/expression.hpp"
 #include "duckdb/catalog/catalog_entry_retriever.hpp"
 #include "duckdb/planner/expression/bound_lambda_expression.hpp"
-#include "duckdb/functions_internal/scalar_function.hpp"
+#include "duckdb/function/scalar_function.hpp"
 
 namespace duckdb {
 

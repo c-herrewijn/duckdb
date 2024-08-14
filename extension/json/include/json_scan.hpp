@@ -13,8 +13,8 @@
 #include "duckdb/common/mutex.hpp"
 #include "duckdb/common/pair.hpp"
 #include "duckdb/common/types/type_map.hpp"
-#include "duckdb/functions_internal/scalar/strftime_format.hpp"
-#include "duckdb/functions_internal/table_function.hpp"
+#include "duckdb/function/scalar/strftime_format.hpp"
+#include "duckdb/function/table_function.hpp"
 #include "json_enums.hpp"
 #include "json_transform.hpp"
 

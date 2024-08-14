@@ -1,4 +1,4 @@
-#include "duckdb/functions_internal/copy_function.hpp"
+#include "duckdb/function/copy_function.hpp"
 #include "duckdb/parser/expression/constant_expression.hpp"
 #include "duckdb/parser/expression/function_expression.hpp"
 #include "duckdb/parser/expression/positional_reference_expression.hpp"

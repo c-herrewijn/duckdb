@@ -11,7 +11,7 @@
 
 #pragma once
 
-#include "duckdb/functions_internal/function_set.hpp"
+#include "duckdb/function/function_set.hpp"
 
 namespace duckdb {
 

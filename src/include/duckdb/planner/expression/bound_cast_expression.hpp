@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/planner/expression.hpp"
-#include "duckdb/functions_internal/cast/default_casts.hpp"
+#include "duckdb/function/cast/default_casts.hpp"
 
 namespace duckdb {
 

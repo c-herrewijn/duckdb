@@ -10,9 +10,9 @@
 
 #include "duckdb/catalog/catalog_set.hpp"
 #include "duckdb/catalog/catalog_entry/function_entry.hpp"
-#include "duckdb/functions_internal/macro_function.hpp"
+#include "duckdb/function/macro_function.hpp"
 #include "duckdb/parser/parsed_data/create_macro_info.hpp"
-#include "duckdb/functions_internal/function_set.hpp"
+#include "duckdb/function/function_set.hpp"
 
 namespace duckdb {
 

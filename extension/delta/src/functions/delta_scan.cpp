@@ -1,4 +1,4 @@
-#include "duckdb/functions_internal/table_function.hpp"
+#include "duckdb/function/table_function.hpp"
 
 #include "delta_functions.hpp"
 #include "functions/delta_scan.hpp"

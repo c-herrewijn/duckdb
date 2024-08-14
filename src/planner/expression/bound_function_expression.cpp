@@ -2,7 +2,7 @@
 #include "duckdb/parser/expression/function_expression.hpp"
 #include "duckdb/catalog/catalog_entry/scalar_function_catalog_entry.hpp"
 #include "duckdb/common/types/hash.hpp"
-#include "duckdb/functions_internal/function_serialization.hpp"
+#include "duckdb/function/function_serialization.hpp"
 #include "duckdb/common/serializer/serializer.hpp"
 #include "duckdb/common/serializer/deserializer.hpp"
 #include "duckdb/functions_core/lambda_functions.hpp"

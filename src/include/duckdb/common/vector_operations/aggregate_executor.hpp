@@ -11,7 +11,7 @@
 #include "duckdb/common/exception.hpp"
 #include "duckdb/common/types/vector.hpp"
 #include "duckdb/common/vector_operations/vector_operations.hpp"
-#include "duckdb/functions_internal/aggregate_state.hpp"
+#include "duckdb/function/aggregate_state.hpp"
 
 namespace duckdb {
 

@@ -2,7 +2,7 @@
 
 #include "duckdb/execution/operator/csv_scanner/csv_sniffer.hpp"
 #include "duckdb/execution/operator/csv_scanner/skip_scanner.hpp"
-#include "duckdb/functions_internal/table/read_csv.hpp"
+#include "duckdb/function/table/read_csv.hpp"
 
 namespace duckdb {
 CSVUnionData::~CSVUnionData() {

@@ -7,12 +7,12 @@
 #include "duckdb/common/helper.hpp"
 #include "duckdb/common/thread.hpp"
 #include "duckdb/common/types/timestamp.hpp"
-#include "duckdb/functions_internal/scalar/strftime_format.hpp"
+#include "duckdb/function/scalar/strftime_format.hpp"
 #include "http_state.hpp"
 #endif
 
 #include "duckdb/common/string_util.hpp"
-#include "duckdb/functions_internal/scalar/string_functions.hpp"
+#include "duckdb/function/scalar/string_functions.hpp"
 #include "duckdb/main/secret/secret_manager.hpp"
 #include "duckdb/storage/buffer_manager.hpp"
 

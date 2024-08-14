@@ -6,7 +6,7 @@
 #include "duckdb/planner/expression/bound_columnref_expression.hpp"
 #include "duckdb/functions_core/aggregate/distributive_functions.hpp"
 #include "duckdb/optimizer/optimizer.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/execution/operator/join/physical_comparison_join.hpp"
 #include "duckdb/planner/expression/bound_aggregate_expression.hpp"
 

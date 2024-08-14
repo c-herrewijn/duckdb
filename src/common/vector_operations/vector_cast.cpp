@@ -1,8 +1,8 @@
 #include "duckdb/common/limits.hpp"
 #include "duckdb/common/vector_operations/vector_operations.hpp"
-#include "duckdb/functions_internal/cast/cast_function_set.hpp"
+#include "duckdb/function/cast/cast_function_set.hpp"
 #include "duckdb/main/config.hpp"
-#include "duckdb/functions_internal/scalar_function.hpp"
+#include "duckdb/function/scalar_function.hpp"
 
 namespace duckdb {
 

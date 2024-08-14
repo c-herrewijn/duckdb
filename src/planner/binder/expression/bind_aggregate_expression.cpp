@@ -12,9 +12,9 @@
 #include "duckdb/planner/expression_binder/base_select_binder.hpp"
 #include "duckdb/planner/query_node/bound_select_node.hpp"
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/functions_internal/scalar/generic_functions.hpp"
+#include "duckdb/function/scalar/generic_functions.hpp"
 #include "duckdb/main/config.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/planner/binder.hpp"
 
 namespace duckdb {

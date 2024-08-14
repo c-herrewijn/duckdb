@@ -9,7 +9,7 @@
 #pragma once
 
 #include "duckdb/parser/parsed_data/create_function_info.hpp"
-#include "duckdb/functions_internal/macro_function.hpp"
+#include "duckdb/function/macro_function.hpp"
 
 namespace duckdb {
 

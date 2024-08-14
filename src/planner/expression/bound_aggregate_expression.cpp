@@ -4,7 +4,7 @@
 #include "duckdb/catalog/catalog_entry/aggregate_function_catalog_entry.hpp"
 #include "duckdb/common/types/hash.hpp"
 #include "duckdb/planner/expression/bound_cast_expression.hpp"
-#include "duckdb/functions_internal/function_serialization.hpp"
+#include "duckdb/function/function_serialization.hpp"
 
 namespace duckdb {
 

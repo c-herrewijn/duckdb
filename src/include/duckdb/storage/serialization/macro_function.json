@@ -3,7 +3,7 @@
     "class": "MacroFunction",
     "class_type": "type",
     "includes": [
-      "duckdb/functions_internal/macro_function.hpp"
+      "duckdb/function/macro_function.hpp"
     ],
     "members": [
       {
@@ -28,7 +28,7 @@
     "base": "MacroFunction",
     "enum": "SCALAR_MACRO",
     "includes": [
-      "duckdb/functions_internal/scalar_macro_function.hpp"
+      "duckdb/function/scalar_macro_function.hpp"
     ],
     "members": [
       {
@@ -43,7 +43,7 @@
     "base": "MacroFunction",
     "enum": "TABLE_MACRO",
     "includes": [
-      "duckdb/functions_internal/table_macro_function.hpp"
+      "duckdb/function/table_macro_function.hpp"
     ],
     "members": [
       {

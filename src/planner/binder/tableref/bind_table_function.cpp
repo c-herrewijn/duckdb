@@ -16,10 +16,10 @@
 #include "duckdb/planner/query_node/bound_select_node.hpp"
 #include "duckdb/planner/tableref/bound_subqueryref.hpp"
 #include "duckdb/planner/tableref/bound_table_function.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/catalog/catalog_entry/table_function_catalog_entry.hpp"
 #include "duckdb/catalog/catalog_entry/table_catalog_entry.hpp"
-#include "duckdb/functions_internal/table/read_csv.hpp"
+#include "duckdb/function/table/read_csv.hpp"
 
 namespace duckdb {
 

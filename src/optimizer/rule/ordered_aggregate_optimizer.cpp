@@ -1,5 +1,5 @@
 #include "duckdb/catalog/catalog_entry/aggregate_function_catalog_entry.hpp"
-#include "duckdb/functions_internal/function_binder.hpp"
+#include "duckdb/function/function_binder.hpp"
 #include "duckdb/optimizer/matcher/expression_matcher.hpp"
 #include "duckdb/optimizer/expression_rewriter.hpp"
 #include "duckdb/planner/expression/bound_aggregate_expression.hpp"

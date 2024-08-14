@@ -2,9 +2,9 @@
 
 #include "duckdb/common/file_system.hpp"
 #include "duckdb/execution/expression_executor.hpp"
-#include "duckdb/functions_internal/cast/cast_function_set.hpp"
-#include "duckdb/functions_internal/cast/default_casts.hpp"
-#include "duckdb/functions_internal/replacement_scan.hpp"
+#include "duckdb/function/cast/cast_function_set.hpp"
+#include "duckdb/function/cast/default_casts.hpp"
+#include "duckdb/function/replacement_scan.hpp"
 #include "duckdb/parser/expression/constant_expression.hpp"
 #include "duckdb/parser/expression/function_expression.hpp"
 #include "duckdb/parser/parsed_data/create_pragma_function_info.hpp"

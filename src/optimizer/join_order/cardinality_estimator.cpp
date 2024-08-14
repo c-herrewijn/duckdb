@@ -3,7 +3,7 @@
 #include "duckdb/common/limits.hpp"
 #include "duckdb/common/printer.hpp"
 #include "duckdb/planner/expression_iterator.hpp"
-#include "duckdb/functions_internal/table/table_scan.hpp"
+#include "duckdb/function/table/table_scan.hpp"
 #include "duckdb/optimizer/join_order/join_node.hpp"
 #include "duckdb/optimizer/join_order/query_graph_manager.hpp"
 #include "duckdb/planner/operator/logical_comparison_join.hpp"

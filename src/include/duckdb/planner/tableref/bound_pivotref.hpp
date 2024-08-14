@@ -12,7 +12,7 @@
 #include "duckdb/planner/bound_tableref.hpp"
 #include "duckdb/planner/expression.hpp"
 #include "duckdb/parser/tableref/pivotref.hpp"
-#include "duckdb/functions_internal/aggregate_function.hpp"
+#include "duckdb/function/aggregate_function.hpp"
 
 namespace duckdb {
 

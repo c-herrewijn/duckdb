@@ -14,7 +14,7 @@
 #include "duckdb/common/helper.hpp"
 #include "duckdb/common/limits.hpp"
 #include "duckdb/common/types/validity_mask.hpp"
-#include "duckdb/functions_internal/compression_function.hpp"
+#include "duckdb/function/compression_function.hpp"
 
 namespace duckdb {
 

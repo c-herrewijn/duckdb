@@ -12,7 +12,7 @@
 #include "duckdb/common/case_insensitive_map.hpp"
 
 #include "pid.hpp"
-#include "duckdb/functions_internal/table/read_csv.hpp"
+#include "duckdb/function/table/read_csv.hpp"
 #include <cmath>
 #include <fstream>
 

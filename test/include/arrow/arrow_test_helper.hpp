@@ -16,7 +16,7 @@
 #include "duckdb/main/connection.hpp"
 #include "duckdb/main/client_config.hpp"
 #include "duckdb/main/database.hpp"
-#include "duckdb/functions_internal/table/arrow.hpp"
+#include "duckdb/function/table/arrow.hpp"
 #include "duckdb/common/arrow/arrow_appender.hpp"
 #include "duckdb/common/arrow/arrow_converter.hpp"
 #include "duckdb/common/arrow/arrow_wrapper.hpp"
