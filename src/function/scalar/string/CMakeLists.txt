@@ -2,7 +2,6 @@ add_subdirectory(regexp)
 add_library_unity(
   duckdb_func_string_main
   OBJECT
-  caseconvert.cpp
   concat.cpp
   concat_ws.cpp
   length.cpp

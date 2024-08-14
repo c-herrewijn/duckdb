@@ -1,20 +1,20 @@
 [
     {
-        "name": "upper2",
+        "name": "upper",
         "parameters": "string",
         "description": "Convert string to upper case.",
         "example": "upper('Hello')",
         "type": "scalar_function",
-        "struct": "Upper2Fun",
-        "aliases": ["ucase2"]
+        "struct": "UpperFun",
+        "aliases": ["ucase"]
     },
     {
-        "name": "lower2",
+        "name": "lower",
         "parameters": "string",
         "description": "Convert string to lower case",
         "example": "lower('Hello')",
         "type": "scalar_function",
-        "struct": "Lower2Fun",
-        "aliases": ["lcase2"]
+        "struct": "LowerFun",
+        "aliases": ["lcase"]
     }
 ]

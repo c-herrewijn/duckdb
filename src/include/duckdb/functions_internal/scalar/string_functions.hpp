@@ -15,8 +15,8 @@
 
 namespace duckdb {
 
-struct Upper2Fun {
-	static constexpr const char *Name = "upper2";
+struct UpperFun {
+	static constexpr const char *Name = "upper";
 	static constexpr const char *Parameters = "string";
 	static constexpr const char *Description = "Convert string to upper case.";
 	static constexpr const char *Example = "upper('Hello')";
@@ -24,14 +24,14 @@ struct Upper2Fun {
 	static ScalarFunction GetFunction();
 };
 
-struct Ucase2Fun {
-	using ALIAS = Upper2Fun;
+struct UcaseFun {
+	using ALIAS = UpperFun;
 
-	static constexpr const char *Name = "ucase2";
+	static constexpr const char *Name = "ucase";
 };
 
-struct Lower2Fun {
-	static constexpr const char *Name = "lower2";
+struct LowerFun {
+	static constexpr const char *Name = "lower";
 	static constexpr const char *Parameters = "string";
 	static constexpr const char *Description = "Convert string to lower case";
 	static constexpr const char *Example = "lower('Hello')";
@@ -39,10 +39,10 @@ struct Lower2Fun {
 	static ScalarFunction GetFunction();
 };
 
-struct Lcase2Fun {
-	using ALIAS = Lower2Fun;
+struct LcaseFun {
+	using ALIAS = LowerFun;
 
-	static constexpr const char *Name = "lcase2";
+	static constexpr const char *Name = "lcase";
 };
 
 } // namespace duckdb
