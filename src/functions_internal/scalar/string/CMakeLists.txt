@@ -5,6 +5,7 @@ add_library_unity(
   concat_ws.cpp
   concat.cpp
   contains.cpp
+  length.cpp
   nfc_normalize.cpp
   prefix.cpp
   strip_accents.cpp

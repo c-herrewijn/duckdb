@@ -1,4 +1,5 @@
 #include "duckdb/functions_core/scalar/list_functions.hpp"
+#include "duckdb/functions_internal/scalar/string_common.hpp"
 #include "duckdb/common/string_util.hpp"
 #include "duckdb/common/swap.hpp"
 #include "duckdb/common/types/data_chunk.hpp"
@@ -70,7 +71,7 @@ int64_t ValueLength(const list_entry_t &value) {
 
 template <>
 int64_t ValueLength(const string_t &value) {
-	return LengthFun::Length<string_t, int64_t>(value);
+	return Length<string_t, int64_t>(value);
 }
 
 template <typename INPUT_TYPE, typename INDEX_TYPE>

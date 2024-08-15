@@ -12,7 +12,7 @@ namespace duckdb {
 struct StandardCharacterReader {
 	static void NextCharacter(const char *sdata, idx_t slen, idx_t &sidx) {
 		sidx++;
-		while (sidx < slen && !LengthFun::IsCharacter(sdata[sidx])) {
+		while (sidx < slen && !IsCharacter(sdata[sidx])) {
 			sidx++;
 		}
 	}
