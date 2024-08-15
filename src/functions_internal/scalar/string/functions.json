@@ -33,7 +33,7 @@
     },
     {
         "name": "list_concat",
-        "parameters": "col0,col1",
+        "parameters": "list1,list2",
         "description": "Concatenates two lists.",
         "example": "list_concat([2, 3], [4, 5, 6])",
         "type": "scalar_function",
@@ -41,7 +41,7 @@
     },
     {
         "name": "||",
-        "parameters": "col0,col1",
+        "parameters": "list1,list2",
         "description": "Concatenates two lists.",
         "example": "list_concat([2, 3], [4, 5, 6])",
         "type": "scalar_function",
@@ -70,14 +70,14 @@
     },
     {
         "name": "strip_accents",
-        "parameters": "",
+        "parameters": "string",
         "description": "Strips accents from string.",
         "example": "strip_accents('mühleisen')",
         "type": "scalar_function"
     },
     {
         "name": "nfc_normalize",
-        "parameters": "",
+        "parameters": "string",
         "description": "Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.",
         "example": "nfc_normalize('ardèch')",
         "type": "scalar_function",

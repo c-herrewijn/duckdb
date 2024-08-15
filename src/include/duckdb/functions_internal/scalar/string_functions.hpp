@@ -65,7 +65,7 @@ struct ConcatFun {
 
 struct ListConcatFun {
 	static constexpr const char *Name = "list_concat";
-	static constexpr const char *Parameters = "col0,col1";
+	static constexpr const char *Parameters = "list1,list2";
 	static constexpr const char *Description = "Concatenates two lists.";
 	static constexpr const char *Example = "list_concat([2, 3], [4, 5, 6])";
 
@@ -92,7 +92,7 @@ struct ArrayCatFun {
 
 struct ConcatOperatorFun {
 	static constexpr const char *Name = "||";
-	static constexpr const char *Parameters = "col0,col1";
+	static constexpr const char *Parameters = "list1,list2";
 	static constexpr const char *Description = "Concatenates two lists.";
 	static constexpr const char *Example = "list_concat([2, 3], [4, 5, 6])";
 
@@ -128,7 +128,7 @@ struct ContainsFun {
 
 struct StripAccentsFun {
 	static constexpr const char *Name = "strip_accents";
-	static constexpr const char *Parameters = "";
+	static constexpr const char *Parameters = "string";
 	static constexpr const char *Description = "Strips accents from string.";
 	static constexpr const char *Example = "strip_accents('mühleisen')";
 
@@ -137,7 +137,7 @@ struct StripAccentsFun {
 
 struct NFCNormalizeFun {
 	static constexpr const char *Name = "nfc_normalize";
-	static constexpr const char *Parameters = "";
+	static constexpr const char *Parameters = "string";
 	static constexpr const char *Description = "Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.";
 	static constexpr const char *Example = "nfc_normalize('ardèch')";
 
