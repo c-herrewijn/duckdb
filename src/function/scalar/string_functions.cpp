@@ -10,8 +10,6 @@ void BuiltinFunctions::RegisterStringFunctions() {
 	Register<LikeEscapeFun>();
 	Register<RegexpFun>();
 	Register<SubstringFun>();
-	Register<PrefixFun>();
-	Register<SuffixFun>();
 	Register<NFCNormalizeFun>();
 }
 

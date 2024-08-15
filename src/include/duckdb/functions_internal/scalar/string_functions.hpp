@@ -99,4 +99,22 @@ struct ConcatOperatorFun {
 	static ScalarFunction GetFunction();
 };
 
+struct PrefixFun {
+	static constexpr const char *Name = "prefix";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct SuffixFun {
+	static constexpr const char *Name = "suffix";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
 } // namespace duckdb

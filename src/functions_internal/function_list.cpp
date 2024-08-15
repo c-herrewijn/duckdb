@@ -36,6 +36,8 @@ static const StaticFunctionDefinition internal_functions[] = {
 	DUCKDB_SCALAR_FUNCTION_ALIAS(ListCatFun),
 	DUCKDB_SCALAR_FUNCTION(ListConcatFun),
 	DUCKDB_SCALAR_FUNCTION(LowerFun),
+	DUCKDB_SCALAR_FUNCTION(PrefixFun),
+	DUCKDB_SCALAR_FUNCTION(SuffixFun),
 	DUCKDB_SCALAR_FUNCTION_ALIAS(UcaseFun),
 	DUCKDB_SCALAR_FUNCTION(UpperFun),
 	DUCKDB_SCALAR_FUNCTION(ConcatOperatorFun),

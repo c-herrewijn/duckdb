@@ -78,16 +78,6 @@ struct SubstringFun {
 	static string_t SubstringGrapheme(Vector &result, string_t input, int64_t offset, int64_t length);
 };
 
-struct PrefixFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct SuffixFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 struct ContainsFun {
 	static ScalarFunctionSet GetFunctions();
 	static ScalarFunction GetStringContains();
