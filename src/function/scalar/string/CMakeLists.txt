@@ -2,7 +2,6 @@ add_subdirectory(regexp)
 add_library_unity(
   duckdb_func_string_main
   OBJECT
-  concat.cpp
   length.cpp
   like.cpp
   nfc_normalize.cpp

@@ -23,5 +23,28 @@
         "description": "Concatenate strings together separated by the specified separator.",
         "example": "concat_ws(', ', 'Banana', 'Apple', 'Melon')",
         "type": "scalar_function"
+    },
+    {
+        "name": "concat",
+        "parameters": "string,...",
+        "description": "Concatenate many strings together.",
+        "example": "concat('Hello', ' ', 'World')",
+        "type": "scalar_function"
+    },
+    {
+        "name": "list_concat",
+        "parameters": "col0,col1",
+        "description": "Concatenates two lists.",
+        "example": "list_concat([2, 3], [4, 5, 6])",
+        "type": "scalar_function",
+        "aliases": ["list_cat","array_concat","array_cat"]
+    },
+    {
+        "name": "||",
+        "parameters": "col0,col1",
+        "description": "Concatenates two lists.",
+        "example": "list_concat([2, 3], [4, 5, 6])",
+        "type": "scalar_function",
+        "struct": "ConcatOperatorFun"
     }
 ]
