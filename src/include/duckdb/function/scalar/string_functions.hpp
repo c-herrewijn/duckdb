@@ -18,12 +18,6 @@ class RE2;
 
 namespace duckdb {
 
-struct StripAccentsFun {
-	static bool IsAscii(const char *input, idx_t n);
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 struct LengthFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 	static inline bool IsCharacter(char c) {
@@ -64,11 +58,6 @@ struct LikeFun {
 
 struct LikeEscapeFun {
 	static ScalarFunction GetLikeEscapeFun();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct NFCNormalizeFun {
-	static ScalarFunction GetFunction();
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 

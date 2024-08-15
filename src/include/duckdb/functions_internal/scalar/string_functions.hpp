@@ -119,11 +119,29 @@ struct SuffixFun {
 
 struct ContainsFun {
 	static constexpr const char *Name = "contains";
-	static constexpr const char *Parameters = "";
-	static constexpr const char *Description = "";
-	static constexpr const char *Example = "";
+	static constexpr const char *Parameters = "string,search_string";
+	static constexpr const char *Description = "Return true if search_string is found within string.";
+	static constexpr const char *Example = "contains('abc', 'a')";
 
 	static ScalarFunctionSet GetFunctions();
+};
+
+struct StripAccentsFun {
+	static constexpr const char *Name = "strip_accents";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "Strips accents from string.";
+	static constexpr const char *Example = "strip_accents('mühleisen')";
+
+	static ScalarFunction GetFunction();
+};
+
+struct NFCNormalizeFun {
+	static constexpr const char *Name = "nfc_normalize";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.";
+	static constexpr const char *Example = "nfc_normalize('ardèch')";
+
+	static ScalarFunction GetFunction();
 };
 
 } // namespace duckdb

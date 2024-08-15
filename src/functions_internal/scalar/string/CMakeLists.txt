@@ -5,7 +5,9 @@ add_library_unity(
   concat_ws.cpp
   concat.cpp
   contains.cpp
+  nfc_normalize.cpp
   prefix.cpp
+  strip_accents.cpp
   suffix.cpp)
 set(ALL_OBJECT_FILES
     ${ALL_OBJECT_FILES} $<TARGET_OBJECTS:duckdb_func_internal_string_main>

@@ -67,5 +67,20 @@
         "description": "Return true if search_string is found within string.",
         "example": "contains('abc', 'a')",
         "type": "scalar_function_set"
+    },
+    {
+        "name": "strip_accents",
+        "parameters": "",
+        "description": "Strips accents from string.",
+        "example": "strip_accents('mühleisen')",
+        "type": "scalar_function"
+    },
+    {
+        "name": "nfc_normalize",
+        "parameters": "",
+        "description": "Convert string to Unicode NFC normalized string. Useful for comparisons and ordering if text data is mixed between NFC normalized and not.",
+        "example": "nfc_normalize('ardèch')",
+        "type": "scalar_function",
+        "struct": "NFCNormalizeFun"
     }
 ]

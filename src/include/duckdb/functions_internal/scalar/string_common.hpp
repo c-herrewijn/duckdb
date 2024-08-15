@@ -4,6 +4,7 @@
 
 namespace duckdb {
 
+bool IsAscii(const char *input, idx_t n);
 idx_t LowerLength(const char *input_data, idx_t input_length);
 void LowerCase(const char *input_data, idx_t input_length, char *result_data);
 idx_t FindStrInStr(const string_t &haystack_s, const string_t &needle_s);
