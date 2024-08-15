@@ -30,12 +30,6 @@ struct LikeEscapeFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 
-struct SubstringFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-	static string_t SubstringUnicode(Vector &result, string_t input, int64_t offset, int64_t length);
-	static string_t SubstringGrapheme(Vector &result, string_t input, int64_t offset, int64_t length);
-};
-
 struct RegexpFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 };

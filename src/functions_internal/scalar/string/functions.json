@@ -125,5 +125,20 @@
         "description": "Returns the length of the list.",
         "example": "array_length([1,2,3])",
         "type": "scalar_function_set"
+    },
+    {
+        "name": "substring",
+        "parameters": "string,start,length",
+        "description": "Extract substring of length characters starting from character start. Note that a start value of 1 refers to the first character of the string.",
+        "example": "substring('Hello', 2, 2)",
+        "type": "scalar_function_set",
+        "aliases": ["substr"]
+    },
+    {
+        "name": "substring_grapheme",
+        "parameters": "string,start,length",
+        "description": "Extract substring of length grapheme clusters starting from character start. Note that a start value of 1 refers to the first character of the string.",
+        "example": "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)",
+        "type": "scalar_function_set"
     }
 ]

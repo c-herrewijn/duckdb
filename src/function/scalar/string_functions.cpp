@@ -6,7 +6,6 @@ void BuiltinFunctions::RegisterStringFunctions() {
 	Register<LikeFun>();
 	Register<LikeEscapeFun>();
 	Register<RegexpFun>();
-	Register<SubstringFun>();
 }
 
 } // namespace duckdb

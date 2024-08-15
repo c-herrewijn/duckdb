@@ -199,7 +199,31 @@ struct ArrayLengthFun {
 	static constexpr const char *Name = "array_length";
 	static constexpr const char *Parameters = "list";
 	static constexpr const char *Description = "Returns the length of the list.";
-	static constexpr const char *Example = "array_length[1,2,3]";
+	static constexpr const char *Example = "array_length([1,2,3])";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct SubstringFun {
+	static constexpr const char *Name = "substring";
+	static constexpr const char *Parameters = "string,start,length";
+	static constexpr const char *Description = "Extract substring of length characters starting from character start. Note that a start value of 1 refers to the first character of the string.";
+	static constexpr const char *Example = "substring('Hello', 2, 2)";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct SubstrFun {
+	using ALIAS = SubstringFun;
+
+	static constexpr const char *Name = "substr";
+};
+
+struct SubstringGraphemeFun {
+	static constexpr const char *Name = "substring_grapheme";
+	static constexpr const char *Parameters = "string,start,length";
+	static constexpr const char *Description = "Extract substring of length grapheme clusters starting from character start. Note that a start value of 1 refers to the first character of the string.";
+	static constexpr const char *Example = "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)";
 
 	static ScalarFunctionSet GetFunctions();
 };
