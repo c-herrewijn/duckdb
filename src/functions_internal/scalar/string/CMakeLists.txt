@@ -4,6 +4,7 @@ add_library_unity(
   caseconvert.cpp
   concat_ws.cpp
   concat.cpp
+  contains.cpp
   prefix.cpp
   suffix.cpp)
 set(ALL_OBJECT_FILES

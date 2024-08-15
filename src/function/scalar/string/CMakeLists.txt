@@ -7,8 +7,7 @@ add_library_unity(
   nfc_normalize.cpp
   regexp.cpp
   substring.cpp
-  strip_accents.cpp
-  contains.cpp)
+  strip_accents.cpp)
 set(ALL_OBJECT_FILES
     ${ALL_OBJECT_FILES} $<TARGET_OBJECTS:duckdb_func_string_main>
     PARENT_SCOPE)

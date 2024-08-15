@@ -117,4 +117,13 @@ struct SuffixFun {
 	static ScalarFunction GetFunction();
 };
 
+struct ContainsFun {
+	static constexpr const char *Name = "contains";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
 } // namespace duckdb

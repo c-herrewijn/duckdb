@@ -60,5 +60,12 @@
         "description": "",
         "example": "",
         "type": "scalar_function"
+    },
+    {
+        "name": "contains",
+        "parameters": "string,search_string",
+        "description": "Return true if search_string is found within string.",
+        "example": "contains('abc', 'a')",
+        "type": "scalar_function_set"
     }
 ]
