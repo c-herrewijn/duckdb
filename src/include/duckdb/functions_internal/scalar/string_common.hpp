@@ -15,6 +15,7 @@ string_t SubstringUnicode(Vector &result, string_t input, int64_t offset, int64_
 string_t SubstringGrapheme(Vector &result, string_t input, int64_t offset, int64_t length);
 
 ScalarFunction GetStringContains();
+DUCKDB_API bool Glob(const char *s, idx_t slen, const char *pattern, idx_t plen, bool allow_question_mark = true);
 
 static inline bool IsCharacter(char c) {
 	return (c & 0xc0) != 0x80;

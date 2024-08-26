@@ -8,6 +8,7 @@
 #include "duckdb/main/database.hpp"
 #include "duckdb/main/secret/secret_manager.hpp"
 #include "duckdb/function/scalar/string_functions.hpp"
+#include "duckdb/functions_internal/scalar/string_common.hpp"
 
 #include <chrono>
 #include <string>
@@ -125,7 +126,7 @@ static bool Match(vector<string>::const_iterator key, vector<string>::const_iter
 			}
 			return false;
 		}
-		if (!LikeFun::Glob(key->data(), key->length(), pattern->data(), pattern->length())) {
+		if (!Glob(key->data(), key->length(), pattern->data(), pattern->length())) {
 			return false;
 		}
 		key++;

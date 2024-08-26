@@ -273,4 +273,85 @@ struct RegexpExtractAllFun {
 	static ScalarFunctionSet GetFunctions();
 };
 
+struct LikeFun {
+	static constexpr const char *Name = "~~";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct NotLikeFun {
+	static constexpr const char *Name = "!~~";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct GlobPatternFun {
+	static constexpr const char *Name = "~~~";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct ILikeFun {
+	static constexpr const char *Name = "~~*";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct NotILikeFun {
+	static constexpr const char *Name = "!~~*";
+	static constexpr const char *Parameters = "";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
+
+	static ScalarFunction GetFunction();
+};
+
+struct LikeEscapeFun {
+	static constexpr const char *Name = "like_escape";
+	static constexpr const char *Parameters = "string,like_specifier,escape_character";
+	static constexpr const char *Description = "Returns true if the string matches the like_specifier (see Pattern Matching) using case-sensitive matching. escape_character is used to search for wildcard characters in the string.";
+	static constexpr const char *Example = "like_escape('a%c', 'a$%c', '$')";
+
+	static ScalarFunction GetFunction();
+};
+
+struct NotLikeEscapeFun {
+	static constexpr const char *Name = "not_like_escape";
+	static constexpr const char *Parameters = "string,like_specifier,escape_character";
+	static constexpr const char *Description = "Returns false if the string matches the like_specifier (see Pattern Matching) using case-sensitive matching. escape_character is used to search for wildcard characters in the string.";
+	static constexpr const char *Example = "not_like_escape('a%c', 'a$%c', '$')";
+
+	static ScalarFunction GetFunction();
+};
+
+struct IlikeEscapeFun {
+	static constexpr const char *Name = "ilike_escape";
+	static constexpr const char *Parameters = "string,like_specifier,escape_character";
+	static constexpr const char *Description = "Returns true if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string.";
+	static constexpr const char *Example = "ilike_escape('A%c', 'a$%C', '$')";
+
+	static ScalarFunction GetFunction();
+};
+
+struct NotIlikeEscapeFun {
+	static constexpr const char *Name = "not_ilike_escape";
+	static constexpr const char *Parameters = "string,like_specifier,escape_character";
+	static constexpr const char *Description = "Returns false if the string matches the like_specifier (see Pattern Matching) using case-insensitive matching. escape_character is used to search for wildcard characters in the string.";
+	static constexpr const char *Example = "not_ilike_escape('A%c', 'a$%C', '$')";
+
+	static ScalarFunction GetFunction();
+};
+
 } // namespace duckdb

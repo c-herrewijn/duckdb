@@ -7,6 +7,7 @@ add_library_unity(
   concat.cpp
   contains.cpp
   length.cpp
+  like.cpp
   nfc_normalize.cpp
   prefix.cpp
   regexp.cpp
