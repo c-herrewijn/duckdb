@@ -1,6 +1,5 @@
 #include "duckdb/execution/expression_executor.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
-#include "duckdb/function/scalar/string_functions.hpp"
 #include "duckdb/functions_internal/scalar/regexp.hpp"
 #include "duckdb/functions_internal/scalar/string_common.hpp"
 #include "re2/re2.h"

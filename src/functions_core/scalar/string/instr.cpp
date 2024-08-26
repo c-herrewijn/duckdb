@@ -4,7 +4,6 @@
 #include "duckdb/common/vector_operations/vector_operations.hpp"
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/functions_internal/scalar/string_common.hpp"
-#include "duckdb/function/scalar/string_functions.hpp"
 #include "utf8proc.hpp"
 
 namespace duckdb {
