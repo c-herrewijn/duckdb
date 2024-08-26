@@ -1,4 +1,4 @@
-#include "duckdb/function/scalar/regexp.hpp"
+#include "duckdb/functions_internal/scalar/regexp.hpp"
 
 #include "duckdb/common/exception.hpp"
 #include "duckdb/common/vector_operations/binary_executor.hpp"

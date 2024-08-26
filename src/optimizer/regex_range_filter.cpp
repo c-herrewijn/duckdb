@@ -11,7 +11,7 @@
 #include "duckdb/planner/expression/bound_function_expression.hpp"
 #include "duckdb/planner/operator/logical_filter.hpp"
 
-#include "duckdb/function/scalar/regexp.hpp"
+#include "duckdb/functions_internal/scalar/regexp.hpp"
 
 namespace duckdb {
 
