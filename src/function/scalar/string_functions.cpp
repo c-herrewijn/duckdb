@@ -5,7 +5,6 @@ namespace duckdb {
 void BuiltinFunctions::RegisterStringFunctions() {
 	Register<LikeFun>();
 	Register<LikeEscapeFun>();
-	Register<RegexpFun>();
 }
 
 } // namespace duckdb

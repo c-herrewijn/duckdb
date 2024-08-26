@@ -30,8 +30,4 @@ struct LikeEscapeFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 
-struct RegexpFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 } // namespace duckdb

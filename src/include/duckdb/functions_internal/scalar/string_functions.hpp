@@ -228,4 +228,49 @@ struct SubstringGraphemeFun {
 	static ScalarFunctionSet GetFunctions();
 };
 
+struct RegexpFullMatchFun {
+	static constexpr const char *Name = "regexp_full_match";
+	static constexpr const char *Parameters = "string,regex[,options]";
+	static constexpr const char *Description = "Returns true if the entire string matches the regex. A set of optional options can be set.";
+	static constexpr const char *Example = "regexp_full_match('anabanana', '(an)*')";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct RegexpMatchesFun {
+	static constexpr const char *Name = "regexp_matches";
+	static constexpr const char *Parameters = "string,pattern[,options]";
+	static constexpr const char *Description = "Returns true if string contains the regexp pattern, false otherwise. A set of optional options can be set.";
+	static constexpr const char *Example = "regexp_matches('anabanana', '(an)*')";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct RegexpReplaceFun {
+	static constexpr const char *Name = "regexp_replace";
+	static constexpr const char *Parameters = "string,pattern,replacement[,options]";
+	static constexpr const char *Description = "If string contains the regexp pattern, replaces the matching part with replacement. A set of optional options can be set.";
+	static constexpr const char *Example = "regexp_replace('hello', '[lo]', '-')";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct RegexpExtractFun {
+	static constexpr const char *Name = "regexp_extract";
+	static constexpr const char *Parameters = "string,pattern[,group = 0][,options]";
+	static constexpr const char *Description = "If string contains the regexp pattern, returns the capturing group specified by optional parameter group. The group must be a constant value. If no group is given, it defaults to 0. A set of optional options can be set.";
+	static constexpr const char *Example = "regexp_extract('abc', '([a-z])(b)', 1)";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
+struct RegexpExtractAllFun {
+	static constexpr const char *Name = "regexp_extract_all";
+	static constexpr const char *Parameters = "string, regex[, group = 0][, options]";
+	static constexpr const char *Description = "Split the string along the regex and extract all occurrences of group. A set of optional options can be set.";
+	static constexpr const char *Example = "regexp_extract_all('hello_world', '([a-z ]+)_?', 1)";
+
+	static ScalarFunctionSet GetFunctions();
+};
+
 } // namespace duckdb

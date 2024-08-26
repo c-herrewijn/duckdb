@@ -1,3 +1,4 @@
+add_subdirectory(regexp)
 add_library_unity(
   duckdb_func_internal_string_main
   OBJECT
@@ -8,6 +9,7 @@ add_library_unity(
   length.cpp
   nfc_normalize.cpp
   prefix.cpp
+  regexp.cpp
   strip_accents.cpp
   substring.cpp
   suffix.cpp)

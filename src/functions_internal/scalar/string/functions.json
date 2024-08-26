@@ -140,5 +140,40 @@
         "description": "Extract substring of length grapheme clusters starting from character start. Note that a start value of 1 refers to the first character of the string.",
         "example": "substring_grapheme('🦆🤦🏼‍♂️🤦🏽‍♀️🦆', 3, 2)",
         "type": "scalar_function_set"
+    },
+    {
+        "name": "regexp_full_match",
+        "parameters": "string,regex[,options]",
+        "description": "Returns true if the entire string matches the regex. A set of optional options can be set.",
+        "example": "regexp_full_match('anabanana', '(an)*')",
+        "type": "scalar_function_set"
+    },
+    {
+        "name": "regexp_matches",
+        "parameters": "string,pattern[,options]",
+        "description": "Returns true if string contains the regexp pattern, false otherwise. A set of optional options can be set.",
+        "example": "regexp_matches('anabanana', '(an)*')",
+        "type": "scalar_function_set"
+    },
+    {
+        "name": "regexp_replace",
+        "parameters": "string,pattern,replacement[,options]",
+        "description": "If string contains the regexp pattern, replaces the matching part with replacement. A set of optional options can be set.",
+        "example": "regexp_replace('hello', '[lo]', '-')",
+        "type": "scalar_function_set"
+    },
+    {
+        "name": "regexp_extract",
+        "parameters": "string,pattern[,group = 0][,options]",
+        "description": "If string contains the regexp pattern, returns the capturing group specified by optional parameter group. The group must be a constant value. If no group is given, it defaults to 0. A set of optional options can be set.",
+        "example": "regexp_extract('abc', '([a-z])(b)', 1)",
+        "type": "scalar_function_set"
+    },
+    {
+        "name": "regexp_extract_all",
+        "parameters": "string, regex[, group = 0][, options]",
+        "description": "Split the string along the regex and extract all occurrences of group. A set of optional options can be set.",
+        "example": "regexp_extract_all('hello_world', '([a-z ]+)_?', 1)",
+        "type": "scalar_function_set"
     }
 ]
