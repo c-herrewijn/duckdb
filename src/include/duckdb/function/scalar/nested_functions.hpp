@@ -105,16 +105,6 @@ struct ListZipFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 
-struct ListSelectFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct ListWhereFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 struct StructExtractFun {
 	static ScalarFunction KeyExtractFunction();
 	static ScalarFunction IndexExtractFunction();

@@ -1,5 +1,6 @@
 #include "duckdb/function/function_list.hpp"
 #include "duckdb/function/scalar/string_functions.hpp"
+#include "duckdb/function/scalar/list_functions.hpp"
 #include "duckdb/parser/parsed_data/create_aggregate_function_info.hpp"
 #include "duckdb/parser/parsed_data/create_scalar_function_info.hpp"
 
@@ -35,6 +36,8 @@ static const StaticFunctionDefinition function[] = {
 	DUCKDB_SCALAR_FUNCTION_ALIAS(ArrayCatFun),
 	DUCKDB_SCALAR_FUNCTION_ALIAS(ArrayConcatFun),
 	DUCKDB_SCALAR_FUNCTION_SET(ArrayLengthFun),
+	DUCKDB_SCALAR_FUNCTION_ALIAS(ArraySelectFun),
+	DUCKDB_SCALAR_FUNCTION_ALIAS(ArrayWhereFun),
 	DUCKDB_SCALAR_FUNCTION_SET(BitLengthFun),
 	DUCKDB_SCALAR_FUNCTION(ConcatFun),
 	DUCKDB_SCALAR_FUNCTION(ConcatWsFun),
@@ -47,6 +50,8 @@ static const StaticFunctionDefinition function[] = {
 	DUCKDB_SCALAR_FUNCTION(LikeEscapeFun),
 	DUCKDB_SCALAR_FUNCTION_ALIAS(ListCatFun),
 	DUCKDB_SCALAR_FUNCTION(ListConcatFun),
+	DUCKDB_SCALAR_FUNCTION(ListSelectFun),
+	DUCKDB_SCALAR_FUNCTION(ListWhereFun),
 	DUCKDB_SCALAR_FUNCTION(LowerFun),
 	DUCKDB_SCALAR_FUNCTION(NFCNormalizeFun),
 	DUCKDB_SCALAR_FUNCTION(NotIlikeEscapeFun),
