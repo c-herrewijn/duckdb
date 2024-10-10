@@ -86,22 +86,7 @@ struct ListExtractFun {
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 
-struct ListContainsFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct ListPositionFun {
-	static ScalarFunction GetFunction();
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
 struct ListResizeFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct ListZipFun {
-	static ScalarFunction GetFunction();
 	static void RegisterFunction(BuiltinFunctions &set);
 };
 

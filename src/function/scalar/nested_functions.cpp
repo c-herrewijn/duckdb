@@ -39,11 +39,8 @@ void MapUtil::ReinterpretMap(Vector &result, Vector &input, idx_t count) {
 
 void BuiltinFunctions::RegisterNestedFunctions() {
 	Register<StructExtractFun>();
-	Register<ListContainsFun>();
-	Register<ListPositionFun>();
 	Register<ListExtractFun>();
 	Register<ListResizeFun>();
-	Register<ListZipFun>();
 }
 
 } // namespace duckdb
