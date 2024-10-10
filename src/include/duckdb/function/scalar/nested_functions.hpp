@@ -82,20 +82,8 @@ struct HistogramAggState {
 	MAP_TYPE *hist;
 };
 
-struct ListExtractFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct ListResizeFun {
-	static void RegisterFunction(BuiltinFunctions &set);
-};
-
-struct StructExtractFun {
-	static ScalarFunction KeyExtractFunction();
-	static ScalarFunction IndexExtractFunction();
-	static ScalarFunctionSet GetFunctions();
-	static unique_ptr<FunctionData> GetBindData(idx_t index);
-	static void RegisterFunction(BuiltinFunctions &set);
-};
+unique_ptr<FunctionData> GetBindData(idx_t index);
+ScalarFunction GetKeyExtractFunction();
+ScalarFunction GetIndexExtractFunction();
 
 } // namespace duckdb

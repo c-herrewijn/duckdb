@@ -37,10 +37,4 @@ void MapUtil::ReinterpretMap(Vector &result, Vector &input, idx_t count) {
 	result.SetVectorType(input.GetVectorType());
 }
 
-void BuiltinFunctions::RegisterNestedFunctions() {
-	Register<StructExtractFun>();
-	Register<ListExtractFun>();
-	Register<ListResizeFun>();
-}
-
 } // namespace duckdb

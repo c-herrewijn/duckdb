@@ -61,7 +61,6 @@ private:
 	void RegisterCompressedMaterializationFunctions();
 	void RegisterGenericFunctions();
 	void RegisterOperators();
-	void RegisterNestedFunctions();
 	void RegisterSequenceFunctions();
 
 	// pragmas
