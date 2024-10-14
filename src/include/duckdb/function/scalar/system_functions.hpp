@@ -1,7 +1,7 @@
 //===----------------------------------------------------------------------===//
 //                         DuckDB
 //
-// duckdb/function/scalar/generic_functions.hpp
+// duckdb/function/scalar/system_functions.hpp
 //
 //
 //===----------------------------------------------------------------------===//
@@ -15,18 +15,18 @@
 
 namespace duckdb {
 
-struct ConstantOrNullFun {
-	static constexpr const char *Name = "constant_or_null";
-	static constexpr const char *Parameters = "arg1,arg2";
-	static constexpr const char *Description = "If arg2 is NULL, return NULL. Otherwise, return arg1.";
-	static constexpr const char *Example = "constant_or_null(42, NULL)";
+struct FinalizeFun {
+	static constexpr const char *Name = "finalize";
+	static constexpr const char *Parameters = "col0";
+	static constexpr const char *Description = "";
+	static constexpr const char *Example = "";
 
 	static ScalarFunction GetFunction();
 };
 
-struct GetVariableFun {
-	static constexpr const char *Name = "getvariable";
-	static constexpr const char *Parameters = "";
+struct CombineFun {
+	static constexpr const char *Name = "combine";
+	static constexpr const char *Parameters = "col0,col1";
 	static constexpr const char *Description = "";
 	static constexpr const char *Example = "";
 

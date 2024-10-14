@@ -97,7 +97,6 @@ void BuiltinFunctions::Initialize() {
 
 	RegisterCompressedMaterializationFunctions();
 
-	RegisterGenericFunctions();
 	RegisterOperators();
 	RegisterSequenceFunctions();
 

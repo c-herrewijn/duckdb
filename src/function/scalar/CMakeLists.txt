@@ -10,7 +10,6 @@ add_library_unity(
   duckdb_func_scalar
   OBJECT
   compressed_materialization_functions.cpp
-  generic_functions.cpp
   nested_functions.cpp
   operators.cpp
   pragma_functions.cpp
