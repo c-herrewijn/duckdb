@@ -480,6 +480,7 @@ coverage-check:
 generate-files:
 	python3 scripts/generate_c_api.py
 	python3 scripts/generate_functions.py
+	python3 scripts/generate_default_macros.py
 	python3 scripts/generate_settings.py
 	python3 scripts/generate_serialization.py
 	python3 scripts/generate_enum_util.py

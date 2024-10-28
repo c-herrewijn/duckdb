@@ -1,0 +1,435 @@
+[
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "round_even",
+        "parameters": "{\"x\", \"n\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "CASE ((abs(x) * power(10, n+1)) % 10) WHEN 5 THEN round(x/2, n) * 2 ELSE round(x, n) END"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "roundbankers",
+        "parameters": "{\"x\", \"n\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "round_even(x, n)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "nullif",
+        "parameters": "{\"a\", \"b\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "CASE WHEN a=b THEN NULL ELSE a END"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_append",
+        "parameters": "{\"l\", \"e\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_concat(l, list_value(e))"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_append",
+        "parameters": "{\"arr\", \"el\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_append(arr, el)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_prepend",
+        "parameters": "{\"e\", \"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_concat(list_value(e), l)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_prepend",
+        "parameters": "{\"el\", \"arr\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_prepend(el, arr)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_pop_back",
+        "parameters": "{\"arr\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "arr[:LEN(arr)-1]"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_pop_front",
+        "parameters": "{\"arr\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "arr[2:]"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_push_back",
+        "parameters": "{\"arr\", \"e\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_concat(arr, list_value(e))"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_push_front",
+        "parameters": "{\"arr\", \"e\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_concat(list_value(e), arr)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_to_string",
+        "parameters": "{\"arr\", \"sep\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(arr::varchar[], 'string_agg', sep)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_to_string_comma_default",
+        "parameters": "{\"arr\", nullptr}, {{\"sep\", \"','",
+        "named_parameters": "{\"sep\", \"','\"}, {nullptr, nullptr}}",
+        "macro": "list_aggr(arr::varchar[], 'string_agg', sep)",
+        "comment": "// Test default parameters\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "generate_subscripts",
+        "parameters": "{\"arr\", \"dim\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "unnest(generate_series(1, array_length(arr, dim)))",
+        "comment": "\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "fdiv",
+        "parameters": "{\"x\", \"y\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "floor(x/y)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "fmod",
+        "parameters": "{\"x\", \"y\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "(x-y*floor(x/y))"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "count_if",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "sum(if(l, 1, 0))"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "split_part",
+        "parameters": "{\"string\", \"delimiter\", \"position\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "coalesce(string_split(string, delimiter)[position],'')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "geomean",
+        "parameters": "{\"x\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "exp(avg(ln(x)))"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "geometric_mean",
+        "parameters": "{\"x\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "geomean(x)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_reverse",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "l[:-:-1]",
+        "comment": "\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_reverse",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_reverse(l)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_intersect",
+        "parameters": "{\"l1\", \"l2\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_filter(list_distinct(l1), (variable_intersect) -> list_contains(l2, variable_intersect))",
+        "comment": "\n// FIXME implement as actual function if we encounter a lot of performance issues. Complexity now: n * m, with hashing possibly n + m\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "array_intersect",
+        "parameters": "{\"l1\", \"l2\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_intersect(l1, l2)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_avg",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'avg')",
+        "comment": "\n// algebraic list aggregates\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_var_samp",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'var_samp')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_var_pop",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'var_pop')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_stddev_pop",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'stddev_pop')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_stddev_samp",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'stddev_samp')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_sem",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'sem')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_approx_count_distinct",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'approx_count_distinct')",
+        "comment": "\n// distributive list aggregates"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_bit_xor",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'bit_xor')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_bit_or",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'bit_or')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_bit_and",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'bit_and')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_bool_and",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'bool_and')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_bool_or",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'bool_or')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_count",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'count')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_entropy",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'entropy')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_last",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'last')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_first",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'first')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_any_value",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'any_value')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_kurtosis",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'kurtosis')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_kurtosis_pop",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'kurtosis_pop')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_min",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'min')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_max",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'max')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_product",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'product')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_skewness",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'skewness')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_sum",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'sum')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_string_agg",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'string_agg')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_mode",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'mode')",
+        "comment": "\n// holistic list aggregates\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_median",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'median')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_mad",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'mad')"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "list_histogram",
+        "parameters": "{\"l\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "list_aggr(l, 'histogram')",
+        "comment": "\n// nested list aggregates\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "map_contains_entry",
+        "parameters": "{\"map\", \"key\", \"value\"}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "contains(map_entries(map), {'key': key, 'value': value})",
+        "comment": "\n// map functions\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "map_contains_value",
+        "parameters": "{\"map\", \"value\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "contains(map_values(map), value)"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "date_add",
+        "parameters": "{\"date\", \"interval\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "date + interval",
+        "comment": "\n// date functions\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "regexp_split_to_table",
+        "parameters": "{\"text\", \"pattern\", nullptr}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "unnest(string_split_regex(text, pattern))",
+        "comment": "\n// regexp functions\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "get_block_size",
+        "parameters": "{\"db_name\"}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "(SELECT block_size FROM pragma_database_size() WHERE database_name = db_name)",
+        "comment": "\n// storage helper functions\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "md5_number_upper",
+        "parameters": "{\"param\"}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "((md5_number(param)::bit::varchar)[65:])::bit::uint64",
+        "comment": "\n// string functions\n"
+    },
+    {
+        "schema": "DEFAULT_SCHEMA",
+        "name": "md5_number_lower",
+        "parameters": "{\"param\"}",
+        "named_parameters": "{{nullptr, nullptr}}",
+        "macro": "((md5_number(param)::bit::varchar)[:64])::bit::uint64"
+    }
+]
