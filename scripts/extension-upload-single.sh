@@ -60,42 +60,44 @@ rm $ext.append
 
 set -e
 
-# Abort if AWS key is not set
-if [ -z "$AWS_ACCESS_KEY_ID" ]; then
-    echo "No AWS key found, skipping.."
-    rm "$ext.compressed"
-    exit 0
-fi
+# # Abort if AWS key is not set
+# if [ -z "$AWS_ACCESS_KEY_ID" ]; then
+#     echo "No AWS key found, skipping.."
+#     rm "$ext.compressed"
+#     exit 0
+# fi
 
-# Set dry run unless guard var is set
-DRY_RUN_PARAM="--dryrun"
-if [ "$DUCKDB_DEPLOY_SCRIPT_MODE" == "for_real" ]; then
-  DRY_RUN_PARAM=""
-fi
+# # Set dry run unless guard var is set
+# DRY_RUN_PARAM="--dryrun"
+# if [ "$DUCKDB_DEPLOY_SCRIPT_MODE" == "for_real" ]; then
+#   DRY_RUN_PARAM=""
+# fi
 
-# upload versioned version
-if [[ $7 = 'true' ]]; then
-  if [ -z "$3" ]; then
-    echo "extension-upload-single.sh called with upload_versioned=true but no extension version was passed"
-    rm "$ext.compressed"
-    exit 1
-  fi
+# # upload versioned version
+# if [[ $7 = 'true' ]]; then
+#   if [ -z "$3" ]; then
+#     echo "extension-upload-single.sh called with upload_versioned=true but no extension version was passed"
+#     rm "$ext.compressed"
+#     exit 1
+#   fi
 
-  if [[ $4 == wasm* ]]; then
-    aws s3 cp $ext.compressed s3://$5/$1/$2/$3/$4/$1.duckdb_extension.wasm $DRY_RUN_PARAM --acl public-read --content-encoding br --content-type="application/wasm"
-  else
-    aws s3 cp $ext.compressed s3://$5/$1/$2/$3/$4/$1.duckdb_extension.gz $DRY_RUN_PARAM --acl public-read
-  fi
-fi
+#   if [[ $4 == wasm* ]]; then
+#     aws s3 cp $ext.compressed s3://$5/$1/$2/$3/$4/$1.duckdb_extension.wasm $DRY_RUN_PARAM --acl public-read --content-encoding br --content-type="application/wasm"
+#   else
+#     aws s3 cp $ext.compressed s3://$5/$1/$2/$3/$4/$1.duckdb_extension.gz $DRY_RUN_PARAM --acl public-read
+#   fi
+# fi
 
-# upload to latest version
-if [[ $6 = 'true' ]]; then
-  if [[ $4 == wasm* ]]; then
-    aws s3 cp $ext.compressed s3://$5/$3/$4/$1.duckdb_extension.wasm $DRY_RUN_PARAM --acl public-read --content-encoding br --content-type="application/wasm"
-  else
-    aws s3 cp $ext.compressed s3://$5/$3/$4/$1.duckdb_extension.gz $DRY_RUN_PARAM --acl public-read
-  fi
-fi
+# # upload to latest version
+# if [[ $6 = 'true' ]]; then
+#   if [[ $4 == wasm* ]]; then
+#     aws s3 cp $ext.compressed s3://$5/$3/$4/$1.duckdb_extension.wasm $DRY_RUN_PARAM --acl public-read --content-encoding br --content-type="application/wasm"
+#   else
+#     aws s3 cp $ext.compressed s3://$5/$3/$4/$1.duckdb_extension.gz $DRY_RUN_PARAM --acl public-read
+#   fi
+# fi
 
 # clean up
 rm "$ext.compressed"
+
+echo "finished extension-upload-single.sh for extension $ext_name"
